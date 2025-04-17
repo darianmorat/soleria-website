@@ -1,1 +1,1 @@
-# soleria-website
+# Soleria Website
