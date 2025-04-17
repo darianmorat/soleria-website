@@ -37,10 +37,7 @@ const HomePage = () => {
                         enamorarte desde el primer vistazo, por eso de la vista nace el
                         amor, y el amor empieza aqui.
                      </p>
-                     <button
-                        className="secondary-button"
-                        onClick={() => navigate("/contact")}
-                     >
+                     <button className="secondary-button" onClick={() => navigate("#")}>
                         Hablemos de tu proyecto
                      </button>
                   </div>
@@ -291,10 +288,7 @@ const HomePage = () => {
                         Solo tienes que activar la cámara, apuntar hacia el piso y dejar
                         que la baldosa hable por sí sola.
                      </p>
-                     <button
-                        className="secondary-button"
-                        onClick={() => navigate("/visualizer")}
-                     >
+                     <button className="secondary-button" onClick={() => navigate("#")}>
                         Probar visualizador 3D
                      </button>
                   </div>
@@ -313,13 +307,13 @@ const HomePage = () => {
             <div className="content-wrapper">
                <h2 className="cta-title">¿Listo para crear la tuya?</h2>
                <div className="cta-buttons">
-                  <button className="cta-button" onClick={() => navigate("/catalog")}>
+                  <button className="cta-button" onClick={() => navigate("#")}>
                      Conoce nuestro catálogo
                   </button>
-                  <button className="cta-button" onClick={() => navigate("/contact")}>
+                  <button className="cta-button" onClick={() => navigate("#")}>
                      Asesoría personalizada
                   </button>
-                  <button className="cta-button" onClick={() => navigate("/editor")}>
+                  <button className="cta-button" onClick={() => navigate("#")}>
                      Estoy listo para elegir
                   </button>
                </div>

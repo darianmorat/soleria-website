@@ -30,15 +30,15 @@ const Footer = () => {
                      </li>
                      <li>
                         <FontAwesomeIcon icon="fa-solid fa-paperclip" className="icons" />
-                        <Link to="/about">Sobre Nosotros</Link>
+                        <Link to="#">Sobre Nosotros</Link>
                      </li>
                      <li>
                         <FontAwesomeIcon icon="fa-solid fa-paperclip" className="icons" />
-                        <Link to="/gallery">Galería</Link>
+                        <Link to="#">Galería</Link>
                      </li>
                      <li>
                         <FontAwesomeIcon icon="fa-solid fa-paperclip" className="icons" />
-                        <Link to="/faq">Preguntas Frecuentes</Link>
+                        <Link to="#">Preguntas Frecuentes</Link>
                      </li>
                   </ul>
                </div>
@@ -51,22 +51,40 @@ const Footer = () => {
                            icon="fa-solid fa-phone-volume"
                            className="icons"
                         />
-                        <span>+57 (313) 453-5196</span>
+                        <a
+                           href="https://web.whatsapp.com/send?phone=3134535196&text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios%21"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                        >
+                           +57 (313) 453-5196
+                        </a>
                      </li>
                      <li>
                         <FontAwesomeIcon
                            icon="fa-brands fa-square-instagram"
                            className="icons"
                         />
-                        <span>@soleriabaldoseria</span>
+                        <a
+                           href="https://www.instagram.com/soleriabaldoseria"
+                           target="_blank"
+                        >
+                           @soleriabaldoseria
+                        </a>
                      </li>
                      <li>
                         <FontAwesomeIcon icon="fa-brands fa-tiktok" className="icons" />
-                        <span>@soleria.baldoseria</span>
+                        <a
+                           href="https://www.tiktok.com/@soleria.baldoseria"
+                           target="_blank"
+                        >
+                           @soleria.baldoseria
+                        </a>
                      </li>
                      <li>
                         <FontAwesomeIcon icon="fa-solid fa-envelope" className="icons" />
-                        <span>soleria.baldosas.hidraulicas@gmail.com</span>
+                        <Link to="mailto:frostbites@gmail.com">
+                           soleria.baldosas@gmail.com
+                        </Link>
                      </li>
                   </ul>
                </div>
@@ -75,8 +93,8 @@ const Footer = () => {
             <div className="footer-bottom">
                <p>&copy; {currentYear}. Todos los derechos reservados.</p>
                <div className="footer-legal">
-                  <Link to="/privacy">Política de Privacidad</Link>
-                  <Link to="/terms">Términos de Servicio</Link>
+                  <Link to="#">Política de Privacidad</Link>
+                  <Link to="#">Términos de Servicio</Link>
                </div>
             </div>
          </div>

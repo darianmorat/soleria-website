@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 // import logo  from "../../assets/logoSlogan.svg";
 import "./Navbar.css"; // Make sure to create this CSS file
+import { useState } from "react";
 
 const Navbar = () => {
+   const [menu, setMenu] = useState(false);
+
+   const mobileMenuToggle = () => {
+      setMenu((prevState) => !prevState);
+   };
+
    return (
       <nav className="navbar">
          <div className="navbar-container">
@@ -14,10 +21,10 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-links">
-               <Link to="/about" className="nav-link">
+               <Link to="#" className="nav-link">
                   Sobre Nosotros
                </Link>
-               <Link to="/faq" className="nav-link">
+               <Link to="#" className="nav-link">
                   Preguntas Frecuentes
                </Link>
                <Link to="/editor" className="nav-button">
@@ -25,12 +32,39 @@ const Navbar = () => {
                </Link>
             </div>
 
-            <div className="mobile-menu-icon">
-               <span></span>
-               <span></span>
-               <span></span>
+            <div className="mobile-menu-icon" onClick={() => mobileMenuToggle()}>
+               {menu ? (
+                  <>
+                     <strong>x Close</strong>
+                  </>
+               ) : (
+                  <>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </>
+               )}
             </div>
          </div>
+         {menu && (
+            <>
+               <div className="menu-links">
+                  <Link to="#" className="nav-link" onClick={() => mobileMenuToggle()}>
+                     Sobre Nosotros
+                  </Link>
+                  <Link to="#" className="nav-link" onClick={() => mobileMenuToggle()}>
+                     Preguntas Frecuentes
+                  </Link>
+                  <Link
+                     to="/editor"
+                     className="nav-link"
+                     onClick={() => mobileMenuToggle()}
+                  >
+                     Crear Baldosa
+                  </Link>
+               </div>
+            </>
+         )}
       </nav>
    );
 };
