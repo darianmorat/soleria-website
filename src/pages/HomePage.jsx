@@ -75,37 +75,37 @@ const HomePage = () => {
                         <div className="layer-item">
                            <div className="layer-color layer-top"></div>
                            <div className="layer-details">
-                              <p>Es donde se encuentra el diseño y el color.</p>
-                              <p>
+                              <li>Es donde se encuentra el diseño y el color.</li>
+                              <li>Espesor: entre 2 y 4 mm.</li>
+                              <li>
                                  Compuesta por cemento blanco, marmolina, pigmentos
                                  minerales y agua.
-                              </p>
-                              <p>Espesor: entre 2 y 4 mm.</p>
+                              </li>
                            </div>
                         </div>
                         <div className="layer-item">
                            <div className="layer-color layer-middle"></div>
                            <div className="layer-details">
-                              <h4>
+                              <li>Compuesta por cemento gris y arena.</li>
+                              <li>Espesor: entre 5 y 8 mm.</li>
+                              <li>
                                  Sirve de transición y absorbe el exceso de agua de la
                                  capa de vista.
-                              </h4>
-                              <p>Compuesta por cemento gris y arena.</p>
-                              <p>Espesor: entre 5 y 8 mm.</p>
+                              </li>
                            </div>
                         </div>
                         <div className="layer-item">
                            <div className="layer-color layer-bottom"></div>
                            <div className="layer-details">
-                              <h4>Da estructura y resistencia a la baldosa.</h4>
-                              <p>
-                                 Compuesta por cemento de alta resistencia y áridos más
-                                 gruesos.
-                              </p>
-                              <p>
+                              <li>Da estructura y resistencia a la baldosa.</li>
+                              <li>
                                  Espesor: el resto de la baldosa (hasta completar 18–25 mm
                                  aprox.)
-                              </p>
+                              </li>
+                              <li>
+                                 Compuesta por cemento de alta resistencia y áridos más
+                                 gruesos.
+                              </li>
                            </div>
                         </div>
                      </div>
@@ -117,10 +117,10 @@ const HomePage = () => {
          {/* Process Steps Section */}
          <section className="process-section">
             <div className="content-wrapper">
-               <h2 className="section-title">¿Te gustaría crear con nosotros?</h2>
+               <h2 className="section-title">¿Cómo creamos juntos?</h2>
                <div className="process-grid">
                   <div className="process-step">
-                     <div className="step-number">1</div>
+                     <div className="step-number">#1</div>
                      <h3>Te enamoras</h3>
                      <p>
                         Descubrís un diseño, una textura, un color. Ya sea en nuestro
@@ -128,7 +128,7 @@ const HomePage = () => {
                      </p>
                   </div>
                   <div className="process-step">
-                     <div className="step-number">2</div>
+                     <div className="step-number">#2</div>
                      <h3>Nos contactas</h3>
                      <p>
                         Nos escribís para contarnos tu idea, espacio o necesidad. Te
@@ -136,7 +136,7 @@ const HomePage = () => {
                      </p>
                   </div>
                   <div className="process-step">
-                     <div className="step-number">3</div>
+                     <div className="step-number">#3</div>
                      <h3>Cotizamos y ajustamos</h3>
                      <p>
                         Hacemos una cotización basada en el diseño, cantidad y lugar de
@@ -145,7 +145,7 @@ const HomePage = () => {
                      </p>
                   </div>
                   <div className="process-step">
-                     <div className="step-number">4</div>
+                     <div className="step-number">#4</div>
                      <h3>Manos al arte</h3>
                      <p>
                         Una vez aprobás, ponemos manos a la obra. Cada baldosa se hace una
@@ -153,7 +153,7 @@ const HomePage = () => {
                      </p>
                   </div>
                   <div className="process-step">
-                     <div className="step-number">5</div>
+                     <div className="step-number">#5</div>
                      <h3>Te lo enviamos o lo instalamos</h3>
                      <p>
                         Coordinamos la entrega o instalación con nuestro equipo o aliados.
@@ -162,7 +162,7 @@ const HomePage = () => {
                      </p>
                   </div>
                   <div className="process-step">
-                     <div className="step-number">6</div>
+                     <div className="step-number">#6</div>
                      <h3>Tu espacio, tu historia</h3>
                      <p>
                         La transformación está lista. Y vos ya no caminás sobre un suelo
@@ -311,7 +311,7 @@ const HomePage = () => {
          {/* CTA Section */}
          <section className="cta-section">
             <div className="content-wrapper">
-               <h2 className="cta-title">¿Te gustaría crear con nosotros?</h2>
+               <h2 className="cta-title">¿Listo para crear la tuya?</h2>
                <div className="cta-buttons">
                   <button className="cta-button" onClick={() => navigate("/catalog")}>
                      Conoce nuestro catálogo
