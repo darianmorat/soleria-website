@@ -6,12 +6,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
    const currentYear = new Date().getFullYear();
 
+   const scrollToTop = () => {
+      window.scrollTo(0, 0);
+   };
+
    return (
       <footer className="footer">
          <div className="footer-container">
             <div className="footer-content">
                <div className="footer-section">
-                  <Link to="/" className="footer-logo">
+                  <Link to="/" className="footer-logo" onClick={scrollToTop}>
                      <img src={logo} alt="logo" />
                   </Link>
                   <p className="footer-description">
@@ -25,7 +29,9 @@ const Footer = () => {
                   <ul className="footer-links">
                      <li>
                         <FontAwesomeIcon icon="fa-solid fa-paperclip" className="icons" />
-                        <Link to="/">Inicio</Link>
+                        <Link to="/" onClick={scrollToTop}>
+                           Inicio
+                        </Link>
                      </li>
                      <li>
                         <FontAwesomeIcon icon="fa-solid fa-paperclip" className="icons" />

@@ -37,7 +37,8 @@ h3 {
 }
 
 p,
-button {
+button,
+a {
    font-size: 1.1rem;
 }
 
@@ -410,7 +411,6 @@ section {
 
    .section-title {
       font-size: 2rem;
-      margin-bottom: 30px;
    }
 
    .process-grid {
@@ -522,6 +522,8 @@ section {
    display: flex;
    flex-direction: row;
    gap: 10px;
+   flex-wrap: wrap;
+   justify-content: center;
 }
 .catalog div {
    width: 100px;
@@ -565,6 +567,10 @@ section {
 
 .color-selection {
    text-align: center;
+}
+
+#canvas {
+   cursor: crosshair;
 }
 
 #canvas,

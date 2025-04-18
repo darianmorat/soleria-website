@@ -10,11 +10,15 @@ const Navbar = () => {
       setMenu((prevState) => !prevState);
    };
 
+   const scrollToTop = () => {
+      window.scrollTo(0, 0);
+   };
+
    return (
       <nav className="navbar">
          <div className="navbar-container">
             <div className="navbar-logo">
-               <Link to="/">
+               <Link to="/" onClick={scrollToTop}>
                   <img src={logo} alt="logo" className="logo" />
                </Link>
             </div>
