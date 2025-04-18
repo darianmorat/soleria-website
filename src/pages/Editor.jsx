@@ -338,7 +338,7 @@ const Editor = () => {
       if (currentTile) {
          loadTile();
       }
-   }, [currentTile]);
+   }, [currentTile, loadTile]);
 
    // Import tile images - you'll need to import these properly in your project
    // import baldosa2 from './catalogo/baldosas para colorear 1-02.png'
@@ -447,7 +447,8 @@ const Editor = () => {
 
                         <div className="color-display">
                            <div className="color-selection">
-                              El color elegido es: <strong id="colorName">{colorName}</strong>
+                              El color elegido es:{" "}
+                              <strong id="colorName">{colorName}</strong>
                            </div>
                         </div>
                         <div className="canvas-container">

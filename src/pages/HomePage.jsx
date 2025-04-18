@@ -333,7 +333,7 @@ const HomePage = () => {
                <div className="create-layout">
                   <div className="">
                      <div className="">
-                        <h3>Nuestros diseños de baldosas</h3>
+                        <h3>Diseños de baldosas</h3>
                         <div className="container-designs">
                            <div className="designs-tail"></div>
                            <div className="designs-tail"></div>
@@ -347,7 +347,7 @@ const HomePage = () => {
                      </div>
                      <div className="">
                         <div className="color-palette">
-                           <h3>Nuestra paleta de colores</h3>
+                           <h3>Paleta de colores</h3>
                            <div className="color-grid">
                               {colors.map(({ color, name }) => (
                                  <div
