@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import logo  from "../../assets/logoSlogan.svg";
+import logo from "../../assets/images/logo.png";
 import "./Navbar.css"; // Make sure to create this CSS file
 import { useState } from "react";
 
@@ -15,8 +15,7 @@ const Navbar = () => {
          <div className="navbar-container">
             <div className="navbar-logo">
                <Link to="/">
-                  {/* <img src={logo} alt="logo" className="logo" /> */}
-                  <img src="darian" alt="logo" />
+                  <img src={logo} alt="logo" className="logo" />
                </Link>
             </div>
 

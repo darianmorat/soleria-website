@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import logo from "../../assets/logoSlogan.svg";
+import logo from "../../assets/images/logo.png";
 import "./Footer.css"; // Make sure to create this CSS file
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -12,8 +12,7 @@ const Footer = () => {
             <div className="footer-content">
                <div className="footer-section">
                   <Link to="/" className="footer-logo">
-                     {/* <img src={logo} alt="logo" /> */}
-                     <img src="darian" alt="logo" />
+                     <img src={logo} alt="logo" />
                   </Link>
                   <p className="footer-description">
                      Creando diseños de baldosas personalizados que transforman tu espacio

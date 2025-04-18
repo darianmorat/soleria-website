@@ -13,7 +13,8 @@
    top: 0;
    left: 0;
    width: 100%;
-   background-color: rgba(255, 255, 255, 0.95);
+   background-color: rgba(255, 255, 255, 0.85);
+   backdrop-filter: blur(4px);
    box-shadow: var(--shadow);
    z-index: 1000;
 }
@@ -30,10 +31,10 @@
 .navbar-logo {
    display: flex;
    align-items: center;
+   height: 50px;
 }
 
 .logo {
-   height: 40px;
    max-width: 160px;
    object-fit: contain;
 }
@@ -97,7 +98,7 @@
    gap: 30px;
    padding-bottom: 120px;
 }
-.menu-links> a{
+.menu-links > a {
    font-size: 1.5rem;
 }
 
