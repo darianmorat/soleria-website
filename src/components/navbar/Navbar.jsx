@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import "./Navbar.css"; // Make sure to create this CSS file
 import { useState } from "react";
 
 const Navbar = () => {
    const [menu, setMenu] = useState(false);
+
+   const navigate = useNavigate();
 
    const mobileMenuToggle = () => {
       setMenu((prevState) => !prevState);
@@ -30,9 +32,9 @@ const Navbar = () => {
                <Link to="#" className="nav-link">
                   Preguntas Frecuentes
                </Link>
-               <Link to="/editor" className="primary-button">
+               <button className="primary-button" onClick={() => navigate("/editor")}>
                   Crear Baldosa
-               </Link>
+               </button>
             </div>
 
             <div className="mobile-menu-icon" onClick={() => mobileMenuToggle()}>

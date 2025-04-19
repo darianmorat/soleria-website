@@ -7,16 +7,20 @@
 
 /* base styles */
 :root {
-   --primary-color: #a67c52;
-   --primary-dark: #8a6642;
-   --secondary-color: #3f5e5a;
+   --primary-color: #8c6b57;
+   --primary-dark: #a67c62;
+   --secondary-color: #6b6b6b;
+   --secondary-dark: #818181;
+   --tertiary-color: #3f5e5a;
+   --tertiary-dark: #476965;
    --dark-gray: #2d2d2d;
    --light-gray: #f5f5f5;
    --beige: #f4efe5;
    --text-color: #333333;
    --light-text: #ffffff;
-   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   --transition: all 0.2s ease;
+   --shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+   --shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.2);
+   --transition: all 0.1s ease-in;
 }
 
 * {
@@ -60,46 +64,44 @@ a {
 .cta-button,
 .primary-button,
 .secondary-button {
-   padding: 9px 28px 12px 28px;
-   border-radius: 6px;
+   padding: 8px 20px 11px 22px;
+   border-radius: 5px;
    cursor: pointer;
    border: none;
    box-shadow: var(--shadow);
    transition: var(--transition);
    text-decoration: none;
    font-weight: 500;
+   color: white;
+   /* box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.65); */
 }
 .cta-button:hover,
 .primary-button:hover,
 .secondary-button:hover {
-   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
+   box-shadow: var(--shadow-hover);
+   /* transform: translate(4px, 4px); */
 }
 
 .primary-button {
    background-color: var(--primary-color);
-   color: white;
 }
 .primary-button:hover {
    background-color: var(--primary-dark);
 }
 
 .secondary-button {
-   background-color: transparent;
-   color: var(--primary-color);
-   border: 2px solid var(--primary-color);
+   background-color: var(--secondary-color);
 }
 .secondary-button:hover {
-   background-color: var(--primary-color);
-   color: white;
+   background-color: var(--secondary-dark);
 }
 
 .cta-button {
-   background-color: var(--secondary-color);
-   color: white;
+   background-color: var(--tertiary-color);
    margin: 10px;
 }
 .cta-button:hover {
-   background-color: #58847e;
+   background-color: var(--tertiary-dark);
 }
 
 /* section styles */
@@ -144,9 +146,9 @@ section {
 }
 
 .hero-title {
-   font-size: 3.5rem;
+   font-size: 3.8rem;
    font-weight: 900;
-   margin-bottom: 20px;
+   margin-bottom: 10px;
    color: var(--primary-color);
 }
 
@@ -179,6 +181,11 @@ section {
    font-size: 1.5rem;
    color: var(--dark-gray);
    border-radius: 8px;
+}
+
+.video-placeholder iframe {
+   border-radius: 8px;
+   box-shadow: var(--shadow-hover);
 }
 
 /* crafting section */
@@ -215,6 +222,8 @@ section {
 
 .layer-details li {
    color: #555;
+   text-indent: -1.5em;
+   padding-left: 1.5em;
 }
 
 /* process section */
