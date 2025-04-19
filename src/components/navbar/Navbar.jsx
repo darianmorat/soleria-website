@@ -30,7 +30,7 @@ const Navbar = () => {
                <Link to="#" className="nav-link">
                   Preguntas Frecuentes
                </Link>
-               <Link to="/editor" className="nav-button">
+               <Link to="/editor" className="primary-button">
                   Crear Baldosa
                </Link>
             </div>
