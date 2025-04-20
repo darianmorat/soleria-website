@@ -7,6 +7,7 @@ decorative tiles. Features an interactive design tool and elegant showcase of cr
 
 - Modern, responsive landing page
 - Interactive tile designer with:
+   - Tile selection
    - Custom color selection
    - Real-time preview
    - Image export
