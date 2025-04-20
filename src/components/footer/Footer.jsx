@@ -16,7 +16,7 @@ const Footer = () => {
             <div className="footer-content">
                <div className="footer-section">
                   <Link to="/" className="footer-logo" onClick={scrollToTop}>
-                     <img src={logo} alt="logo" />
+                     <img src={logo} alt="logo" className="footer-logo" />
                   </Link>
                   <p className="footer-description">
                      Creando diseños de baldosas personalizados que transforman tu espacio
@@ -87,7 +87,7 @@ const Footer = () => {
                      </li>
                      <li>
                         <FontAwesomeIcon icon="fa-solid fa-envelope" className="icons" />
-                        <Link to="mailto:frostbites@gmail.com">
+                        <Link to="mailto:soleria.baldosas.hidraulicas@gmail.com">
                            soleria.baldosas@gmail.com
                         </Link>
                      </li>

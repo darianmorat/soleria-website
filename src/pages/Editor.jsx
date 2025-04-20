@@ -338,7 +338,7 @@ const Editor = () => {
       if (currentTile) {
          loadTile();
       }
-   }, [currentTile, loadTile]);
+   }, [currentTile]);
 
    // Import tile images - you'll need to import these properly in your project
    // import baldosa2 from './catalogo/baldosas para colorear 1-02.png'

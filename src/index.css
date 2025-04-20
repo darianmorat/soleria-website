@@ -48,6 +48,47 @@ a {
    font-size: 1.1rem;
 }
 
+/* Cursors */
+* {
+   cursor:
+      url("./assets/cursors/arrowhead-rounded-outline.svg") 4 4,
+      auto;
+}
+
+button:hover,
+a:hover,
+.logo,
+.footer-logo,
+.catalog img,
+.palette div,
+.container-designs .designs-tail,
+.color-grid .color-item,
+.color-grid .color-item span,
+.tile-end-result {
+   cursor:
+      url("./assets/cursors/hand-pointer.svg") 4 4,
+      pointer;
+}
+
+.process-grid .process-step,
+.process-grid .process-step * {
+   cursor:
+      url("./assets/cursors/star-5pt-outline.svg") 4 4,
+      pointer;
+}
+
+#canvas {
+   cursor:
+      url("./assets/cursors/eye-dropper.svg") 4 20,
+      crosshair;
+}
+
+#preview-canvas {
+   cursor:
+      url("./assets/cursors/not-allowed.svg") 4 4,
+      pointer;
+}
+
 /* container */
 .landing-container {
    min-height: 100vh;
@@ -66,7 +107,6 @@ a {
 .secondary-button {
    padding: 8px 20px 11px 22px;
    border-radius: 5px;
-   cursor: pointer;
    border: none;
    box-shadow: var(--shadow);
    transition: var(--transition);
@@ -506,7 +546,6 @@ section {
 .tile,
 .color {
    border: 2px solid #ddd;
-   cursor: pointer;
    transition: transform 0.1s;
 }
 
@@ -572,10 +611,6 @@ section {
 
 .color-selection {
    text-align: center;
-}
-
-#canvas {
-   cursor: crosshair;
 }
 
 #canvas,
