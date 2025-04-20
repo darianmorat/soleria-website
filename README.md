@@ -1,7 +1,7 @@
 # Soleria Website
 
 Official website for **Soleria Baldosería**, a small business specializing in custom
-decorative tiles. Features an interactive design tool and elegant showcase of craftsmanship.
+decorative tiles. Features an interactive design tool and elegant showcase of craftsmanship
 
 ## Features
 
@@ -31,5 +31,5 @@ npm run dev
 ```
 
 ## License
-
-© 2025 Soleria Baldosería. Proprietary software. All rights reserved.
+Proprietary software. All rights reserved    
+© 2025 Soleria Baldosería
