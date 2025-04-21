@@ -192,7 +192,7 @@ const HomePage = () => {
                         <iframe
                            width="100%"
                            height="100%"
-                           src="https://www.youtube.com/embed/ygQoW3SF9Fw"
+                           src="https://www.youtube.com/embed/_KWZrOZmyUs?si=MRpgzJtuRWgp51TU"
                            title="YouTube video player"
                            frameBorder="0"
                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -215,7 +215,7 @@ const HomePage = () => {
                         <iframe
                            width="100%"
                            height="100%"
-                           src="https://www.youtube.com/embed/ygQoW3SF9Fw"
+                           src="https://www.youtube.com/embed/_KWZrOZmyUs?si=MRpgzJtuRWgp51TU"
                            title="YouTube video player"
                            frameBorder="0"
                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -233,7 +233,12 @@ const HomePage = () => {
                      <div className="layers-info">
                         {/* <h3>Hecha en capas</h3> */}
                         <div className="layer-item">
-                           <div className="layer-top"></div>
+                           <div className="layer-top">
+                              <img
+                                 src="../../public/tiles/para visualizador1.png"
+                                 alt=""
+                              />
+                           </div>
                            <div className="layer-details">
                               <li>Es donde se encuentra el diseño y el color.</li>
                               <li>Espesor: entre 2 y 4 mm.</li>
@@ -244,7 +249,12 @@ const HomePage = () => {
                            </div>
                         </div>
                         <div className="layer-item">
-                           <div className="layer-middle"></div>
+                           <div className="layer-top">
+                              <img
+                                 src="../../public/tiles/para visualizador2.png"
+                                 alt=""
+                              />
+                           </div>
                            <div className="layer-details">
                               <li>Compuesta por cemento gris y arena.</li>
                               <li>Espesor: entre 5 y 8 mm.</li>
@@ -255,7 +265,12 @@ const HomePage = () => {
                            </div>
                         </div>
                         <div className="layer-item">
-                           <div className="layer-bottom"></div>
+                           <div className="layer-top">
+                              <img
+                                 src="../../public/tiles/para visualizador3.png"
+                                 alt=""
+                              />
+                           </div>
                            <div className="layer-details">
                               <li>Da estructura y resistencia a la baldosa.</li>
                               <li>
@@ -351,14 +366,38 @@ const HomePage = () => {
                      <div className="">
                         <h3>Diseños de baldosas</h3>
                         <div className="container-designs">
-                           <div className="designs-tail"></div>
-                           <div className="designs-tail"></div>
-                           <div className="designs-tail"></div>
-                           <div className="designs-tail"></div>
-                           <div className="designs-tail"></div>
-                           <div className="designs-tail"></div>
-                           <div className="designs-tail"></div>
-                           <div className="designs-tail"></div>
+                           <div className="designs-tail color-item">
+                              <img src="../../public/tiles/tile1.png" alt="" />
+                              <span>SB 031</span>
+                           </div>
+                           <div className="designs-tail color-item">
+                              <img src="../../public/tiles/tile2.png" alt="" />
+                              <span>SB 033</span>
+                           </div>
+                           <div className="designs-tail color-item">
+                              <img src="../../public/tiles/tile3.png" alt="" />
+                              <span>SB 034</span>
+                           </div>
+                           <div className="designs-tail color-item">
+                              <img src="../../public/tiles/tile4.png" alt="" />
+                              <span>SB 038</span>
+                           </div>
+                           <div className="designs-tail color-item">
+                              <img src="../../public/tiles/tile4.png" alt="" />
+                              <span>SB 033</span>
+                           </div>
+                           <div className="designs-tail color-item">
+                              <img src="../../public/tiles/tile2.png" alt="" />
+                              <span>SB 039</span>
+                           </div>
+                           <div className="designs-tail color-item">
+                              <img src="../../public/tiles/tile1.png" alt="" />
+                              <span>SB 032</span>
+                           </div>
+                           <div className="designs-tail color-item">
+                              <img src="../../public/tiles/tile3.png" alt="" />
+                              <span>SB 030</span>
+                           </div>
                         </div>
                      </div>
                      <div className="">
@@ -380,7 +419,9 @@ const HomePage = () => {
                   </div>
                   <div>
                      <h3>Resultado final</h3>
-                     <div className="tile-end-result"></div>
+                     <div className="tile-end-result">
+                        <img src="../../public/tiles/final-result1.jpg" alt="" />
+                     </div>
                   </div>
                </div>
             </div>
@@ -414,7 +455,7 @@ const HomePage = () => {
                         <iframe
                            width="100%"
                            height="100%"
-                           src="https://www.youtube.com/embed/ygQoW3SF9Fw"
+                           src="https://www.youtube.com/embed/_KWZrOZmyUs?si=MRpgzJtuRWgp51TU"
                            title="YouTube video player"
                            frameBorder="0"
                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -431,8 +472,14 @@ const HomePage = () => {
             <div className="content-wrapper">
                <h2 className="cta-title">¿Listo para crear la tuya?</h2>
                <div className="cta-buttons">
-                  <button className="cta-button" onClick={() => navigate("#")}>
-                     Conoce nuestro catálogo
+                  <button className="cta-button">
+                     <a
+                        href="../../public/catalogo-baldosas.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                     >
+                        Conoce nuestro catálogo
+                     </a>
                   </button>
                   <button className="cta-button" onClick={() => navigate("#")}>
                      Asesoría personalizada
@@ -440,6 +487,27 @@ const HomePage = () => {
                   <button className="cta-button" onClick={() => navigate("#")}>
                      Estoy listo para elegir
                   </button>
+               </div>
+            </div>
+         </section>
+
+         {/* qa section */}
+         <section className="cta-section">
+            <div className="content-wrapper">
+               <div class="_df_book" source="http://www.yoursite.com/flipbook.pdf"></div>
+
+               <h2 className="cta-title">Preguntas frecuentes</h2>
+               <div className="questions">
+                  <h2>¿Pregunta 1?</h2>
+                  <p>Respuesta a pregunta 1</p>
+               </div>
+               <div className="questions">
+                  <h2>¿Pregunta 1?</h2>
+                  <p>Respuesta a pregunta 1</p>
+               </div>
+               <div className="questions">
+                  <h2>¿Pregunta 1?</h2>
+                  <p>Respuesta a pregunta 1</p>
                </div>
             </div>
          </section>
