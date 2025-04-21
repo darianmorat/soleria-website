@@ -21,6 +21,61 @@
    --shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
    --shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.2);
    --transition: all 0.1s ease-in;
+
+   --dark-gray: #2d2d2d;
+   --darker-gray: #1a1a1a;
+   --accent-color: #c8a977;
+}
+
+.demoPage {
+   /* width: 100%; */
+   /* height: 100%; */
+   /* display: flex; */
+   /* justify-content: center; */
+   /* align-items: center; */
+   background: white;
+   color: black;
+   /* border: 1px solid #ccc; */
+   /* font-size: 24px; */
+}
+
+.demoPage img {
+   width: 100%;
+   height: 100%;
+}
+
+.expanded-book-modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 1);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   z-index: 1000;
+}
+
+.expanded-book-container {
+   padding-bottom: 10px;
+   width: 80%;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.expand-close {
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+
+.current-page {
+   color: white;
 }
 
 * {
@@ -142,10 +197,6 @@ a:hover,
 }
 .cta-button:hover {
    background-color: var(--tertiary-dark);
-}
-.cta-button a {
-   text-decoration: none;
-   color: white;
 }
 
 /* section styles */
@@ -423,26 +474,100 @@ section {
    margin-top: 20px;
 }
 
-/* cta section */
+/* catalog section */
+.catalog-section {
+   background-color: var(--beige);
+}
+
+/* FAQ Section Styles */
 .cta-section {
    background-color: var(--dark-gray);
    color: white;
-   text-align: center;
-   padding: 80px 0;
 }
 
-.cta-title {
-   font-size: 2.8rem;
-   font-weight: 700;
-   margin-bottom: 40px;
+.section-title.faq {
    color: white;
 }
+.cta-section .title-separation {
+   margin-bottom: 10px;
+}
 
-.cta-buttons {
+/* FAQ Container Styles */
+.faq-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 30px;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 40px 20px;
+}
+
+.question-item {
+   background-color: var(--darker-gray);
+   border-radius: 5px;
+   padding: 20px;
+   transition: var(--transition);
+   border-left: 5px solid transparent;
+}
+
+.question-item:hover {
+   transform: translateY(-3px);
+   box-shadow: var(--shadow-hover);
+   border-left-color: var(--accent-color);
+}
+
+.question-item h3 {
+   color: var(--accent-color);
+}
+
+.question-item p {
+   color: #e0e0e0;
+}
+
+.question-item ul {
+   padding-left: 20px;
+   margin: 10px 0;
+}
+
+.question-item li {
+   line-height: 1.5;
+}
+
+.question-item strong {
+   color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+   .faq-container {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 30px 15px;
+   }
+
+   .question-item {
+      padding: 20px;
+   }
+}
+
+.book-container {
    display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
+   flex-direction: column;
+   align-items: center;
    gap: 20px;
+}
+.book-actions {
+   display: flex;
+   align-items: center;
+}
+.book-actions button {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+}
+.book-actions button svg {
+   margin-top: 5px;
+   font-size: 20px;
 }
 
 /* responsive design */
