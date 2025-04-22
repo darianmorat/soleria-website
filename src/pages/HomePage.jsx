@@ -2,6 +2,17 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import MyBook from "../components/catalog/Catalog";
 
+import visualizador1 from "../assets/tiles/para visualizador1.png";
+import visualizador2 from "../assets/tiles/para visualizador2.png";
+import visualizador3 from "../assets/tiles/para visualizador3.png";
+import tile1 from "../assets/tiles/tile1.png";
+import tile2 from "../assets/tiles/tile2.png";
+import tile3 from "../assets/tiles/tile3.png";
+import tile4 from "../assets/tiles/tile4.png";
+import finalResult1 from "../assets/tiles/final-result1.jpg";
+// import finalResult2 from "../assets/tiles/final-result2.jpg";
+// import finalResult3 from "../assets/tiles/final-result3.jpg";
+
 const HomePage = () => {
    const navigate = useNavigate();
    const canvasRef = useRef(null);
@@ -195,7 +206,6 @@ const HomePage = () => {
                            height="100%"
                            src="https://www.youtube.com/embed/_KWZrOZmyUs?si=MRpgzJtuRWgp51TU"
                            title="YouTube video player"
-                           frameBorder="0"
                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                            allowFullScreen
                         ></iframe>
@@ -218,7 +228,6 @@ const HomePage = () => {
                            height="100%"
                            src="https://www.youtube.com/embed/_KWZrOZmyUs?si=MRpgzJtuRWgp51TU"
                            title="YouTube video player"
-                           frameBorder="0"
                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                            allowFullScreen
                         ></iframe>
@@ -235,10 +244,7 @@ const HomePage = () => {
                         {/* <h3>Hecha en capas</h3> */}
                         <div className="layer-item">
                            <div className="layer-top">
-                              <img
-                                 src="../../public/tiles/para visualizador1.png"
-                                 alt=""
-                              />
+                              <img src={visualizador1} alt="" />
                            </div>
                            <div className="layer-details">
                               <li>Es donde se encuentra el diseño y el color.</li>
@@ -251,10 +257,7 @@ const HomePage = () => {
                         </div>
                         <div className="layer-item">
                            <div className="layer-top">
-                              <img
-                                 src="../../public/tiles/para visualizador2.png"
-                                 alt=""
-                              />
+                              <img src={visualizador2} alt="" />
                            </div>
                            <div className="layer-details">
                               <li>Compuesta por cemento gris y arena.</li>
@@ -267,10 +270,7 @@ const HomePage = () => {
                         </div>
                         <div className="layer-item">
                            <div className="layer-top">
-                              <img
-                                 src="../../public/tiles/para visualizador3.png"
-                                 alt=""
-                              />
+                              <img src={visualizador3} alt="" />
                            </div>
                            <div className="layer-details">
                               <li>Da estructura y resistencia a la baldosa.</li>
@@ -368,35 +368,35 @@ const HomePage = () => {
                         <h3>Diseños de baldosas</h3>
                         <div className="container-designs">
                            <div className="designs-tail color-item">
-                              <img src="../../public/tiles/tile1.png" alt="" />
+                              <img src={tile1} alt="" />
                               <span>SB 031</span>
                            </div>
                            <div className="designs-tail color-item">
-                              <img src="../../public/tiles/tile2.png" alt="" />
+                              <img src={tile2} alt="" />
                               <span>SB 033</span>
                            </div>
                            <div className="designs-tail color-item">
-                              <img src="../../public/tiles/tile3.png" alt="" />
+                              <img src={tile3} alt="" />
                               <span>SB 034</span>
                            </div>
                            <div className="designs-tail color-item">
-                              <img src="../../public/tiles/tile4.png" alt="" />
+                              <img src={tile4} alt="" />
                               <span>SB 038</span>
                            </div>
                            <div className="designs-tail color-item">
-                              <img src="../../public/tiles/tile4.png" alt="" />
+                              <img src={tile3} alt="" />
                               <span>SB 033</span>
                            </div>
                            <div className="designs-tail color-item">
-                              <img src="../../public/tiles/tile2.png" alt="" />
+                              <img src={tile4} alt="" />
                               <span>SB 039</span>
                            </div>
                            <div className="designs-tail color-item">
-                              <img src="../../public/tiles/tile1.png" alt="" />
+                              <img src={tile1} alt="" />
                               <span>SB 032</span>
                            </div>
                            <div className="designs-tail color-item">
-                              <img src="../../public/tiles/tile3.png" alt="" />
+                              <img src={tile2} alt="" />
                               <span>SB 030</span>
                            </div>
                         </div>
@@ -421,7 +421,7 @@ const HomePage = () => {
                   <div>
                      <h3>Resultado final</h3>
                      <div className="tile-end-result">
-                        <img src="../../public/tiles/final-result1.jpg" alt="" />
+                        <img src={finalResult1} alt="" />
                      </div>
                   </div>
                </div>
@@ -458,7 +458,6 @@ const HomePage = () => {
                            height="100%"
                            src="https://www.youtube.com/embed/_KWZrOZmyUs?si=MRpgzJtuRWgp51TU"
                            title="YouTube video player"
-                           frameBorder="0"
                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                            allowFullScreen
                         ></iframe>

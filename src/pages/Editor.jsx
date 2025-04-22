@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from "react";
-import baldosa2 from "../assets/catalog/baldosas para colorear 1-02.png";
-import baldosa3 from "../assets/catalog/baldosas para colorear 1-03.png";
-import baldosa4 from "../assets/catalog/baldosas para colorear 1-04.png";
-import baldosa5 from "../assets/catalog/baldosas para colorear 1-05.png";
-import baldosa6 from "../assets/catalog/baldosas para colorear 1-06.png";
-import baldosa7 from "../assets/catalog/baldosas para colorear 1-07.png";
-import baldosa8 from "../assets/catalog/baldosas para colorear 1-08.png";
-import baldosa9 from "../assets/catalog/baldosas para colorear 1-09.png";
+import baldosa1 from "../assets/catalog/compressed/baldosas para colorear 1-01.png";
+import baldosa2 from "../assets/catalog/compressed/baldosas para colorear 1-02.png";
+import baldosa3 from "../assets/catalog/compressed/baldosas para colorear 1-03.png";
+import baldosa4 from "../assets/catalog/compressed/baldosas para colorear 1-04.png";
+import baldosa5 from "../assets/catalog/compressed/baldosas para colorear 1-05.png";
+import baldosa6 from "../assets/catalog/compressed/baldosas para colorear 1-06.png";
+import baldosa7 from "../assets/catalog/compressed/baldosas para colorear 1-07.png";
+import baldosa8 from "../assets/catalog/compressed/baldosas para colorear 1-08.png";
+import baldosa9 from "../assets/catalog/compressed/baldosas para colorear 1-09.png";
+import baldosa10 from "../assets/catalog/compressed/baldosas para colorear 1-10.png";
 
 const Editor = () => {
    // State variables (replacing global variables)
@@ -344,6 +346,7 @@ const Editor = () => {
    // import baldosa2 from './catalogo/baldosas para colorear 1-02.png'
    // This is a placeholder for demo purposes
    const tilesData = [
+      { id: baldosa1, path: "baldosas para colorear 1-01.png", alt: "Baldosa 1" },
       { id: baldosa2, path: "baldosas para colorear 1-02.png", alt: "Baldosa 2" },
       { id: baldosa3, path: "baldosas para colorear 1-03.png", alt: "Baldosa 3" },
       { id: baldosa4, path: "baldosas para colorear 1-04.png", alt: "Baldosa 4" },
@@ -352,6 +355,7 @@ const Editor = () => {
       { id: baldosa7, path: "baldosas para colorear 1-07.png", alt: "Baldosa 7" },
       { id: baldosa8, path: "baldosas para colorear 1-08.png", alt: "Baldosa 8" },
       { id: baldosa9, path: "baldosas para colorear 1-09.png", alt: "Baldosa 9" },
+      { id: baldosa10, path: "baldosas para colorear 1-10.png", alt: "Baldosa 10" },
    ];
 
    // Color palette data

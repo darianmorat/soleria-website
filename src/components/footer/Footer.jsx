@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/logo/logo.png";
 import "./Footer.css"; // Make sure to create this CSS file
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
