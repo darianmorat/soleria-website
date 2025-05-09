@@ -1,7 +1,7 @@
 # Soleria Website
 
 Official website for **Soleria Baldosería**, a small business specializing in custom
-decorative tiles. Features an interactive design tool and elegant showcase of craftsmanship
+decorative tiles
 
 ## Features
 
@@ -13,23 +13,11 @@ decorative tiles. Features an interactive design tool and elegant showcase of cr
    - Image export
 - Mobile-friendly experience
 
-## Tech Stack
+## Documentation
 
-- **Frontend:** React.js
-- **Styling:** CSS Modules
-- **Hosting:** Hostinger
-
-## Getting Started
-
-To run this project locally:
-
-```shell
-git clone https://github.com/darianmorat/soleria-website.git
-cd soleria-website
-npm install
-npm run dev
-```
+For complete documentation, refer to the [/docs](https://github.com/darianmorat/soleria-website/tree/main/docs) section.
 
 ## License
-Proprietary software. All rights reserved    
+
+Proprietary software. All rights reserved  
 © 2025 Soleria Baldosería
