@@ -1,7 +1,10 @@
 # Soleria Website
 
-Official website for **Soleria Baldosería**, a small business specializing in custom
-decorative tiles
+[![Live Website](https://img.shields.io/badge/Website-Soleria-2EA44F?style=flat)](https://soleriabaldoseria.com/)
+
+Official website for **Soleria Baldosería**, a small business specializing in custom decorative tiles.
+
+[Live Website](https://soleriabaldoseria.com/)
 
 ## Features
 
