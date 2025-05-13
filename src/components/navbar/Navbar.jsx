@@ -29,10 +29,15 @@ const Navbar = () => {
                <Link to="#" className="nav-link">
                   Sobre Nosotros
                </Link>
-               <Link to="#" className="nav-link">
+               <a href="#questions" className="nav-link">
                   Preguntas Frecuentes
-               </Link>
-               <button className="primary-button" onClick={() => navigate("/editor")}>
+               </a>
+               <button
+                  className="primary-button"
+                  onClick={() => {
+                     navigate("/editor"), scrollToTop();
+                  }}
+               >
                   Crear Baldosa
                </button>
             </div>

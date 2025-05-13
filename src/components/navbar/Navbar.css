@@ -1,13 +1,4 @@
 /* Navbar Styles */
-:root {
-   --primary-color: #a67c52;
-   --primary-dark: #8a6642;
-   --text-color: #333333;
-   --light-text: #ffffff;
-   --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-   --transition: all 0.3s ease;
-}
-
 .navbar {
    position: fixed;
    top: 0;
@@ -15,7 +6,7 @@
    width: 100%;
    background-color: rgba(255, 255, 255, 0.85);
    backdrop-filter: blur(4px);
-   box-shadow: var(--shadow);
+   box-shadow: var(--shadow-sm);
    z-index: 1000;
 }
 
@@ -46,12 +37,12 @@
 }
 
 .nav-link {
-   color: var(--text-color);
+   color: var(--font-color-base);
    text-decoration: none;
    font-weight: 500;
    font-size: 1rem;
    position: relative;
-   transition: var(--transition);
+   transition: var(--transition-fast);
 }
 
 .nav-link:hover {
@@ -66,7 +57,7 @@
    width: 0;
    height: 2px;
    background-color: var(--primary-color);
-   transition: var(--transition);
+   transition: var(--transition-fast);
 }
 
 .nav-link:hover::after {
@@ -97,9 +88,9 @@
    display: block;
    width: 25px;
    height: 3px;
-   background-color: var(--text-color);
+   background-color: var(--font-color-base);
    margin: 2px 0;
-   transition: var(--transition);
+   transition: var(--transition-fast);
 }
 
 /* Responsive styles */

@@ -112,7 +112,7 @@ function MyBook() {
                className="cta-button"
                onClick={() => book.current.pageFlip().flipPrev()}
             >
-               <FontAwesomeIcon icon="fa-solid fa-angle-left" className="icons" />
+               <FontAwesomeIcon icon="fa-solid fa-angle-left" className="icons-v2" />
                Prev
             </button>
             <div>
@@ -123,7 +123,7 @@ function MyBook() {
                onClick={() => book.current.pageFlip().flipNext()}
             >
                Next
-               <FontAwesomeIcon icon="fa-solid fa-angle-right" className="icons" />
+               <FontAwesomeIcon icon="fa-solid fa-angle-right" className="icons-v2" />
             </button>
             <button className="expand-button cta-button" onClick={toggleExpand}>
                <FontAwesomeIcon icon="fa-solid fa-expand" />
@@ -155,7 +155,7 @@ function MyBook() {
                      >
                         <FontAwesomeIcon
                            icon="fa-solid fa-angle-left"
-                           className="icons"
+                           className="icons-v2"
                         />
                         Prev
                      </button>
@@ -169,7 +169,7 @@ function MyBook() {
                         Next
                         <FontAwesomeIcon
                            icon="fa-solid fa-angle-right"
-                           className="icons"
+                           className="icons-v2"
                         />
                      </button>
                      <button
