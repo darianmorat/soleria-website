@@ -13,6 +13,8 @@ import finalResult1 from "../assets/tiles/final-result1.jpg";
 // import finalResult2 from "../assets/tiles/final-result2.jpg";
 // import finalResult3 from "../assets/tiles/final-result3.jpg";
 
+import banner from "../assets/heroSection/banner.png";
+
 const HomePage = () => {
    const navigate = useNavigate();
    const canvasRef = useRef(null);
@@ -155,6 +157,7 @@ const HomePage = () => {
       <div className="landing-container">
          {/* hero section */}
          <section className="hero-section">
+            <img src={banner} alt="" />
             <canvas
                ref={canvasRef}
                style={{
@@ -167,12 +170,14 @@ const HomePage = () => {
                }}
             />
 
-            <div className="content-wrapper">
-               <h1 className="hero-title">Hacemos baldosas hidraulicas</h1>
-               <p className="hero-subtitle">
-                  Solería nació del deseo de recuperar la belleza de lo esencial.
-                  Combinamos diseño contemporáneo con saberes tradicionales.
-               </p>
+            <div className="content-text-container">
+               <div className="content-text">
+                  <h1 className="hero-title">Hacemos baldosas hidraulicas</h1>
+                  <p className="hero-subtitle">
+                     Solería nació del deseo de recuperar la belleza de lo esencial.
+                     Combinamos diseño contemporáneo con saberes tradicionales.
+                  </p>
+               </div>
             </div>
          </section>
 
@@ -204,7 +209,7 @@ const HomePage = () => {
                         <iframe
                            width="100%"
                            height="100%"
-                           src="https://www.youtube.com/embed/_KWZrOZmyUs?si=MRpgzJtuRWgp51TU"
+                           src="https://www.youtube-nocookie.com/embed/_KWZrOZmyUs?si=MRpgzJtuRWgp51TU"
                            title="YouTube video player"
                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                            allowFullScreen
@@ -226,7 +231,7 @@ const HomePage = () => {
                         <iframe
                            width="100%"
                            height="100%"
-                           src="https://www.youtube.com/embed/_KWZrOZmyUs?si=MRpgzJtuRWgp51TU"
+                           src="https://www.youtube-nocookie.com/embed/_KWZrOZmyUs?si=MRpgzJtuRWgp51TU"
                            title="YouTube video player"
                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                            allowFullScreen
@@ -456,7 +461,7 @@ const HomePage = () => {
                         <iframe
                            width="100%"
                            height="100%"
-                           src="https://www.youtube.com/embed/_KWZrOZmyUs?si=MRpgzJtuRWgp51TU"
+                           src="https://www.youtube-nocookie.com/embed/_KWZrOZmyUs?si=MRpgzJtuRWgp51TU"
                            title="YouTube video player"
                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                            allowFullScreen
@@ -481,7 +486,9 @@ const HomePage = () => {
          {/* qa section */}
          <section className="cta-section">
             <div className="content-wrapper">
-               <h2 className="section-title faq">Preguntas frecuentes</h2>
+               <h2 className="section-title faq" id="questions">
+                  Preguntas frecuentes
+               </h2>
                <div className="title-separation"></div>
                <div className="faq-container">
                   <div className="question-item">
@@ -496,47 +503,43 @@ const HomePage = () => {
 
                   <div className="question-item">
                      <h3>¿En qué se diferencia de una baldosa cerámica?</h3>
-                     <p>
-                        <ul>
-                           <li>
-                              Las baldosas <strong>hidráulicas</strong> no se hornean: se
-                              prensan y secan al aire.
-                           </li>
-                           <li>
-                              Tienen <strong>más espesor y peso</strong>.
-                           </li>
-                           <li>
-                              Son completamente{" "}
-                              <strong>artesanales y personalizables</strong>.
-                           </li>
-                           <li>
-                              Requieren <strong>sellado y mantenimiento especial</strong>{" "}
-                              para conservar su belleza.
-                           </li>
-                           <li>
-                              La cerámica, en cambio, se fabrica en serie, se hornea y
-                              suele tener un acabado brillante.
-                           </li>
-                        </ul>
-                     </p>
+                     <ul>
+                        <li>
+                           Las baldosas <strong>hidráulicas</strong> no se hornean: se
+                           prensan y secan al aire.
+                        </li>
+                        <li>
+                           Tienen <strong>más espesor y peso</strong>.
+                        </li>
+                        <li>
+                           Son completamente{" "}
+                           <strong>artesanales y personalizables</strong>.
+                        </li>
+                        <li>
+                           Requieren <strong>sellado y mantenimiento especial</strong>{" "}
+                           para conservar su belleza.
+                        </li>
+                        <li>
+                           La cerámica, en cambio, se fabrica en serie, se hornea y suele
+                           tener un acabado brillante.
+                        </li>
+                     </ul>
                   </div>
 
                   <div className="question-item">
                      <h3>¿Cuántas baldosas necesito por metro cuadrado?</h3>
-                     <p>
-                        Depende del tamaño:
-                        <ul>
-                           <li>
-                              Si la baldosa es de <strong>25 × 25 cm</strong>, necesitás{" "}
-                              <strong>16 baldosas por metro cuadrado</strong>.
-                           </li>
-                           <li>
-                              Si es <strong>hexagonal de 10 × 10 cm</strong>, entran
-                              aproximadamente <strong>32 por metro cuadrado</strong> (el
-                              cálculo puede variar según el diseño y la junta).
-                           </li>
-                        </ul>
-                     </p>
+                     <p>Depende del tamaño:</p>
+                     <ul>
+                        <li>
+                           Si la baldosa es de <strong>25 × 25 cm</strong>, necesitás{" "}
+                           <strong>16 baldosas por metro cuadrado</strong>.
+                        </li>
+                        <li>
+                           Si es <strong>hexagonal de 10 × 10 cm</strong>, entran
+                           aproximadamente <strong>32 por metro cuadrado</strong> (el
+                           cálculo puede variar según el diseño y la junta).
+                        </li>
+                     </ul>
                   </div>
 
                   <div className="question-item">
@@ -559,21 +562,17 @@ const HomePage = () => {
 
                   <div className="question-item">
                      <h3>¿Cómo se realiza el pedido?</h3>
-                     <p>
-                        <ul>
-                           <li>Eliges tu baldosa.</li>
-                           <li>
-                              Te cotizamos según cantidad, diseño y lugar de entrega.
-                           </li>
-                           <li>
-                              Pagas el <strong>50% para iniciar producción</strong>.
-                           </li>
-                           <li>
-                              Te avisamos cuando esté lista para pagar el saldo y
-                              coordinar la entrega o recogida.
-                           </li>
-                        </ul>
-                     </p>
+                     <ul>
+                        <li>Eliges tu baldosa.</li>
+                        <li>Te cotizamos según cantidad, diseño y lugar de entrega.</li>
+                        <li>
+                           Pagas el <strong>50% para iniciar producción</strong>.
+                        </li>
+                        <li>
+                           Te avisamos cuando esté lista para pagar el saldo y coordinar
+                           la entrega o recogida.
+                        </li>
+                     </ul>
                   </div>
 
                   <div className="question-item">
