@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import HomePage from "./pages/HomePage";
@@ -16,6 +16,7 @@ function App() {
          <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/editor" element={<Editor />} />
+            <Route path="*" element={<Navigate to="/" />} />
          </Routes>
          <Footer />
       </>
