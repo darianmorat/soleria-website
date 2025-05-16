@@ -1,22 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import baldosa1 from "../assets/catalog/001.png";
-import baldosa2 from "../assets/catalog/002.png";
-import baldosa3 from "../assets/catalog/003.png";
-import baldosa4 from "../assets/catalog/004.png";
-import baldosa5 from "../assets/catalog/005.png";
-import baldosa6 from "../assets/catalog/006.png";
-import baldosa7 from "../assets/catalog/007.png";
-import baldosa8 from "../assets/catalog/008.png";
-import baldosa9 from "../assets/catalog/009.png";
-import baldosa10 from "../assets/catalog/010.png";
-import baldosa11 from "../assets/catalog/011.png";
-import baldosa12 from "../assets/catalog/012.png";
-import baldosa13 from "../assets/catalog/013.png";
-import baldosa14 from "../assets/catalog/014.png";
-import baldosa15 from "../assets/catalog/015.png";
-import baldosa16 from "../assets/catalog/016.png";
-import baldosa17 from "../assets/catalog/017.png";
-import baldosa18 from "../assets/catalog/018.png";
+import { tileColors } from "../data/TileColors.jsx";
+import { tileModels } from "../data/TileModels.jsx";
 
 const Editor = () => {
    // State variables (replacing global variables)
@@ -415,62 +399,6 @@ const Editor = () => {
       }
    }, [currentTile]);
 
-   // Data to load
-   const tilesData = [
-      { id: baldosa1, alt: "Baldosa 1" },
-      { id: baldosa2, alt: "Baldosa 2" },
-      { id: baldosa3, alt: "Baldosa 3" },
-      { id: baldosa4, alt: "Baldosa 4" },
-      { id: baldosa5, alt: "Baldosa 5" },
-      { id: baldosa6, alt: "Baldosa 6" },
-      { id: baldosa7, alt: "Baldosa 7" },
-      { id: baldosa8, alt: "Baldosa 8" },
-      { id: baldosa9, alt: "Baldosa 9" },
-      { id: baldosa10, alt: "Baldosa 10" },
-      { id: baldosa11, alt: "Baldosa 11" },
-      { id: baldosa12, alt: "Baldosa 12" },
-      { id: baldosa13, alt: "Baldosa 13" },
-      { id: baldosa14, alt: "Baldosa 14" },
-      { id: baldosa15, alt: "Baldosa 15" },
-      { id: baldosa16, alt: "Baldosa 16" },
-      { id: baldosa17, alt: "Baldosa 17" },
-      { id: baldosa18, alt: "Baldosa 18" },
-   ];
-
-   const colorsData = [
-      { color: "#f8f7f2", name: "MC1" },
-      { color: "#c6bdbe", name: "MC2" },
-      { color: "#7e7c7d", name: "MC3" },
-      { color: "#333333", name: "MC4" },
-      { color: "#288ac9", name: "MC5" },
-      { color: "#487fc0", name: "MC6" },
-      { color: "#23496d", name: "MC7" },
-      { color: "#1a2e51", name: "MC8" },
-      { color: "#9ebbbf", name: "MC9" },
-      { color: "#b5dbdb", name: "MC10" },
-      { color: "#714293", name: "MC11" },
-      { color: "#ab71ae", name: "MC12" },
-      { color: "#eb568d", name: "MC13" },
-      { color: "#bd444b", name: "MC14" },
-      { color: "#b03c3c", name: "MC15" },
-      { color: "#8f271c", name: "MC16" },
-      { color: "#f0bcae", name: "MC17" },
-      { color: "#f9cbcd", name: "MC18" },
-      { color: "#d76334", name: "MC19" },
-      { color: "#c37d41", name: "MC20" },
-      { color: "#cd9856", name: "MC21" },
-      { color: "#8f7365", name: "MC22" },
-      { color: "#c4a296", name: "MC23" },
-      { color: "#58482f", name: "MC24" },
-      { color: "#f9c941", name: "MC25" },
-      { color: "#f9c85f", name: "MC26" },
-      { color: "#ecce74", name: "MC27" },
-      { color: "#ecdba7", name: "MC28" },
-      { color: "#998d59", name: "MC29" },
-      { color: "#90a268", name: "MC30" },
-      { color: "#2ab190", name: "MC31" },
-      { color: "#395137", name: "MC32" },
-   ];
 
    return (
       <>
@@ -489,7 +417,7 @@ const Editor = () => {
                   <div className="selection-menus">
                      <div className="baldosas-section">
                         <div className="catalog">
-                           {tilesData.map((tile, index) => (
+                           {tileModels.map((tile, index) => (
                               <div
                                  key={index}
                                  className={`tile ${currentTile === tile.id ? "selected" : ""}`}
@@ -517,7 +445,7 @@ const Editor = () => {
                         <div className="selection-menus editor">
                            <div className="editor-section">
                               <div className="palette" id="color-palette">
-                                 {colorsData.map((colorItem, index) => (
+                                 {tileColors.map((colorItem, index) => (
                                     <div
                                        key={index}
                                        className={`color ${colorName === colorItem.name ? "selected" : ""}`}
