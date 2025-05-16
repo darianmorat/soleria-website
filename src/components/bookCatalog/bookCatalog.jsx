@@ -39,7 +39,7 @@ import page34 from "../../assets/bookCatalog/catalogo-baldosas-page-034.jpg";
 import page35 from "../../assets/bookCatalog/catalogo-baldosas-page-035.jpg";
 import page36 from "../../assets/bookCatalog/catalogo-baldosas-page-036.jpg";
 
-function MyBook() {
+export const BookCatalog = () => {
    const pageImages = [
       page1,
       page2,
@@ -184,6 +184,4 @@ function MyBook() {
          )}
       </>
    );
-}
-
-export default MyBook;
+};

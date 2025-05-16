@@ -1,4 +1,4 @@
-import MyBook from "../components/catalog/Catalog";
+import { BookCatalog } from "../components/bookCatalog/bookCatalog";
 
 export const Catalog = () => {
    return (
@@ -7,7 +7,7 @@ export const Catalog = () => {
             <h2 className="section-title">Conoce nuestro catálogo</h2>
             <div className="title-separation"></div>
             <div className="book-container">
-               <MyBook />
+               <BookCatalog />
             </div>
          </div>
       </section>
