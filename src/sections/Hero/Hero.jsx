@@ -1,5 +1,5 @@
-import banner from "../assets/heroSection/banner.png";
-import { ParticlesBackground } from "../components/particlesBackground/ParticlesBackground";
+import banner from "../../assets/heroSection/banner.png";
+import { ParticlesBackground } from "../../components/ParticlesBackground/ParticlesBackground";
 
 export const Hero = () => {
    return (

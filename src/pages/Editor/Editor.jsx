@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { tileColors } from "../data/TileColors.jsx";
-import { tileModels } from "../data/TileModels.jsx";
+import { tileColors } from "../../data/TileColors.jsx";
+import { tileModels } from "../../data/TileModels.jsx";
 
 const Editor = () => {
    // State variables (replacing global variables)

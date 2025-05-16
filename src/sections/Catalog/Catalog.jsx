@@ -1,4 +1,4 @@
-import { BookCatalog } from "../components/bookCatalog/bookCatalog";
+import { BookCatalog } from "../../components/BookCatalog/BookCatalog";
 
 export const Catalog = () => {
    return (

@@ -1,6 +1,6 @@
-import visualizador1 from "../assets/tiles/para visualizador1.png";
-import visualizador2 from "../assets/tiles/para visualizador2.png";
-import visualizador3 from "../assets/tiles/para visualizador3.png";
+import visualizador1 from "../../assets/tiles/para visualizador1.png";
+import visualizador2 from "../../assets/tiles/para visualizador2.png";
+import visualizador3 from "../../assets/tiles/para visualizador3.png";
 
 export const Crafting = () => {
    return (

@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import Navbar from "./components/navbar/Navbar";
-import Footer from "./components/footer/Footer";
-import HomePage from "./pages/HomePage";
-import Editor from "./pages/Editor";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import HomePage from "./pages/HomePage/HomePage";
+import Editor from "./pages/Editor/Editor";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";

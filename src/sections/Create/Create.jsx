@@ -1,11 +1,11 @@
-import tile1 from "../assets/tiles/tile1.png";
-import tile2 from "../assets/tiles/tile2.png";
-import tile3 from "../assets/tiles/tile3.png";
-import tile4 from "../assets/tiles/tile4.png";
-import finalResult1 from "../assets/tiles/final-result1.jpg";
-// import finalResult2 from "../assets/tiles/final-result2.jpg";
-// import finalResult3 from "../assets/tiles/final-result3.jpg";
-import { tileColors } from "../data/TileColors";
+import tile1 from "../../assets/tiles/tile1.png";
+import tile2 from "../../assets/tiles/tile2.png";
+import tile3 from "../../assets/tiles/tile3.png";
+import tile4 from "../../assets/tiles/tile4.png";
+import finalResult1 from "../../assets/tiles/final-result1.jpg";
+// import finalResult2 from "../../assets/tiles/final-result2.jpg";
+// import finalResult3 from "../../assets/tiles/final-result3.jpg";
+import { tileColors } from "../../data/TileColors";
 
 export const Create = () => {
    return (
