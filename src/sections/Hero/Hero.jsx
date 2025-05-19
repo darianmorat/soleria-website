@@ -1,5 +1,5 @@
 import { ParticlesBackground } from "../../components/ParticlesBackground/ParticlesBackground";
-import banner from "../../assets/heroSection/banner.png";
+import banner from "../../assets/heroSection/banner.webp";
 import styles from "./Hero.module.css";
 
 export const Hero = () => {
