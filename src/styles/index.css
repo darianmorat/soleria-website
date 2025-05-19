@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap");
 @import "./variables.css";
 
-/* Globals */
 * {
    margin: 0;
    padding: 0;
@@ -13,14 +12,15 @@
 body {
    transition: 0.3s;
    line-height: 1.5;
-
-   /* dark */
    color-scheme: light dark;
-   color: var(--font-color-base);
 
    /* light */
-   /* color: white; */
-   /* background-color: #202020; */
+   color: white;
+   background-color: #202020;
+
+   /* dark */
+   color: var(--font-color-base);
+   background-color: white;
 }
 
 h3 {
@@ -28,7 +28,6 @@ h3 {
    color: var(--font-color-base);
 }
 
-/* Icons */
 .icons {
    color: white;
    background-color: var(--primary-color);
@@ -38,7 +37,6 @@ h3 {
    height: 18px;
 }
 
-/* Buttons */
 button {
    padding: 8px 20px 11px 22px;
    border-radius: var(--border-radius-sm);
@@ -53,9 +51,4 @@ button {
       filter: brightness(1.1);
       cursor: pointer;
    }
-}
-
-.primary-button,
-.secondary-button {
-   background-color: var(--primary-color);
 }
