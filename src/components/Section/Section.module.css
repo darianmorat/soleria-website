@@ -1,0 +1,30 @@
+.section {
+   padding: 100px 0;
+}
+
+.bgPrimary {
+   background-color: var(--beige);
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+.title {
+   font-size: var(--font-size-lg);
+   font-weight: 700;
+   margin-bottom: 50px;
+   color: var(--primary-color);
+   text-align: center;
+}
+
+.separation {
+   width: 120px;
+   height: 4px;
+   background: var(--primary-color);
+   margin: 1rem auto 3rem;
+   margin-top: -45px;
+   border-radius: 999px;
+}

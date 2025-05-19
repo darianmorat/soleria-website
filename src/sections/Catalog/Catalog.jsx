@@ -1,15 +1,13 @@
 import { BookCatalog } from "../../components/BookCatalog/BookCatalog";
+import { Section } from "../../components/Section/Section";
+import styles from "./Catalog.module.css";
 
 export const Catalog = () => {
    return (
-      <section className="catalog-section">
-         <div className="content-wrapper">
-            <h2 className="section-title">Conoce nuestro catálogo</h2>
-            <div className="title-separation"></div>
-            <div className="book-container">
-               <BookCatalog />
-            </div>
+      <Section title="Conoce nuestro catálogo" bgColor="primary">
+         <div className={styles.container}>
+            <BookCatalog />
          </div>
-      </section>
+      </Section>
    );
 };

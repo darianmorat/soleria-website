@@ -1,16 +1,17 @@
-import banner from "../../assets/heroSection/banner.png";
 import { ParticlesBackground } from "../../components/ParticlesBackground/ParticlesBackground";
+import banner from "../../assets/heroSection/banner.png";
+import styles from "./Hero.module.css";
 
 export const Hero = () => {
    return (
-      <section className="hero-section">
+      <section className={styles.hero}>
          <img src={banner} alt="" />
          <ParticlesBackground />
 
-         <div className="content-text-container">
-            <div className="content-text">
-               <h1 className="hero-title">Hacemos baldosas hidraulicas</h1>
-               <p className="hero-subtitle">
+         <div className={styles.container}>
+            <div className={styles.content}>
+               <h1 className={styles.title}>Hacemos baldosas hidraulicas</h1>
+               <p className={styles.subtitle}>
                   Solería nació del deseo de recuperar la belleza de lo esencial.
                   Combinamos diseño contemporáneo con saberes tradicionales.
                </p>

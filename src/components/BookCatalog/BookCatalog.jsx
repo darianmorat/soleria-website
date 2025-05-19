@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import HTMLFlipBook from "react-pageflip";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styles from "./BookCatalog.module.css";
 
 import page1 from "../../assets/bookCatalog/catalogo-baldosas-page-001.jpg";
 import page2 from "../../assets/bookCatalog/catalogo-baldosas-page-002.jpg";
@@ -38,6 +39,7 @@ import page33 from "../../assets/bookCatalog/catalogo-baldosas-page-033.jpg";
 import page34 from "../../assets/bookCatalog/catalogo-baldosas-page-034.jpg";
 import page35 from "../../assets/bookCatalog/catalogo-baldosas-page-035.jpg";
 import page36 from "../../assets/bookCatalog/catalogo-baldosas-page-036.jpg";
+import { RemoveScroll } from "react-remove-scroll";
 
 export const BookCatalog = () => {
    const pageImages = [
@@ -92,24 +94,10 @@ export const BookCatalog = () => {
       setIsExpanded(!isExpanded);
    };
 
-   return (
-      <>
-         <HTMLFlipBook
-            width={400}
-            height={500}
-            usePortrait={true}
-            onFlip={handleFlip}
-            ref={book}
-         >
-            {pageImages.map((pageImg, index) => (
-               <div key={index} className="demoPage">
-                  <img src={pageImg} alt="" />
-               </div>
-            ))}
-         </HTMLFlipBook>
-         <div className="book-actions">
+   const BookActions = () => {
+      return (
+         <div className={styles.actions}>
             <button
-               className="cta-button"
                onClick={() => book.current.pageFlip().flipPrev()}
             >
                <FontAwesomeIcon icon="fa-solid fa-angle-left" className="icons-v2" />
@@ -119,68 +107,66 @@ export const BookCatalog = () => {
                {currentPage + 1} of {totalPages}
             </div>
             <button
-               className="cta-button"
                onClick={() => book.current.pageFlip().flipNext()}
             >
                Next
                <FontAwesomeIcon icon="fa-solid fa-angle-right" className="icons-v2" />
             </button>
-            <button className="expand-button cta-button" onClick={toggleExpand}>
-               <FontAwesomeIcon icon="fa-solid fa-expand" />
-            </button>
+
+            {isExpanded ? (
+               <button
+                  className="expand-button expand-close"
+                  onClick={toggleExpand}
+               >
+                  <FontAwesomeIcon icon="fa-solid fa-compress" />
+               </button>
+            ) : (
+               <button className="expand-button" onClick={toggleExpand}>
+                  <FontAwesomeIcon icon="fa-solid fa-expand" />
+               </button>
+            )}
          </div>
+      );
+   };
+
+   return (
+      <>
+         <HTMLFlipBook
+            width={380}
+            height={480}
+            usePortrait={true}
+            onFlip={handleFlip}
+            ref={book}
+         >
+            {pageImages.map((pageImg, index) => (
+               <div key={index} className={styles.demoPage}>
+                  <img src={pageImg} alt="" />
+               </div>
+            ))}
+         </HTMLFlipBook>
+         <BookActions />
 
          {isExpanded && (
-            <>
-               <div className="expanded-book-modal">
-                  <div className="expanded-book-container">
+            <RemoveScroll>
+               <div className={styles.modal}>
+                  <div className={styles.modalContainer}>
                      <HTMLFlipBook
-                        width={500}
-                        height={650}
-                        // usePortrait={true}
+                        width={430}
+                        height={530}
+                        usePortrait={true}
                         onFlip={handleFlip}
                         ref={book}
                      >
                         {pageImages.map((pageImg, index) => (
-                           <div key={index} className="demoPage">
+                           <div key={index} className={styles.demoPage}>
                               <img src={pageImg} alt="" />
                            </div>
                         ))}
                      </HTMLFlipBook>
                   </div>
-                  <div className="book-actions">
-                     <button
-                        className="cta-button"
-                        onClick={() => book.current.pageFlip().flipPrev()}
-                     >
-                        <FontAwesomeIcon
-                           icon="fa-solid fa-angle-left"
-                           className="icons-v2"
-                        />
-                        Prev
-                     </button>
-                     <div className="current-page">
-                        {currentPage + 1} of {totalPages}
-                     </div>
-                     <button
-                        className="cta-button"
-                        onClick={() => book.current.pageFlip().flipNext()}
-                     >
-                        Next
-                        <FontAwesomeIcon
-                           icon="fa-solid fa-angle-right"
-                           className="icons-v2"
-                        />
-                     </button>
-                     <button
-                        className="expand-button cta-button expand-close"
-                        onClick={toggleExpand}
-                     >
-                        Close
-                     </button>
-                  </div>
+                  <BookActions />
                </div>
-            </>
+            </RemoveScroll>
          )}
       </>
    );

@@ -1,15 +1,15 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo/logo.png";
-import "./Navbar.css"; // Make sure to create this CSS file
-import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
-   const [menu, setMenu] = useState(false);
-
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
    const navigate = useNavigate();
 
    const mobileMenuToggle = () => {
-      setMenu((prevState) => !prevState);
+      setIsMenuOpen((prevState) => !prevState);
    };
 
    const scrollToTop = () => {
@@ -17,64 +17,75 @@ const Navbar = () => {
    };
 
    return (
-      <nav className="navbar">
-         <div className="navbar-container">
-            <div className="navbar-logo">
+      <nav className={styles.navbar}>
+         <div className={styles.container}>
+            <div className={styles.logoContainer}>
                <Link to="/" onClick={scrollToTop}>
-                  <img src={logo} alt="logo" className="logo" />
+                  <img src={logo} alt="logo" className={styles.logo} />
                </Link>
             </div>
 
-            <div className="navbar-links">
-               <Link to="#" className="nav-link">
-                  Sobre Nosotros
-               </Link>
-               <a href="#questions" className="nav-link">
-                  Preguntas Frecuentes
-               </a>
-               <button
-                  className="primary-button"
-                  onClick={() => {
-                     navigate("/editor"), scrollToTop();
-                  }}
-               >
-                  Crear Baldosa
-               </button>
-            </div>
+            {isMenuOpen ? (
+               <div className={styles.menuLinks}>
+                  <Link to="/" className={styles.link} onClick={() => mobileMenuToggle()}>
+                     Volver a inicio
+                  </Link>
+                  <Link to="#" className={styles.link} onClick={() => mobileMenuToggle()}>
+                     Sobre nosotros
+                  </Link>
+                  <Link to="#" className={styles.link} onClick={() => mobileMenuToggle()}>
+                     Preguntas frecuentes
+                  </Link>
+                  <Link
+                     to="/editor"
+                     className={styles.link}
+                     onClick={() => mobileMenuToggle()}
+                  >
+                     Crear baldosa
+                  </Link>
+               </div>
+            ) : (
+               <div className={styles.links}>
+                  <Link to="#" className={styles.link}>
+                     Sobre nosotros
+                  </Link>
+                  <a href="#questions" className={styles.link}>
+                     Preguntas frecuentes
+                  </a>
+                  <button
+                     className={styles.createBtn}
+                     onClick={() => {
+                        navigate("/editor"), scrollToTop();
+                     }}
+                  >
+                     Crear baldosa
+                  </button>
+                  <button className={styles.icon}>
+                     <FontAwesomeIcon icon="fa-solid fa-sun" />
+                  </button>
+               </div>
+            )}
 
-            <div className="mobile-menu-icon" onClick={() => mobileMenuToggle()}>
-               {menu ? (
+            <div className={styles.menuBtn} onClick={() => mobileMenuToggle()}>
+               {isMenuOpen ? (
                   <>
-                     <strong>x Close</strong>
+                     <button>
+                        <FontAwesomeIcon icon="fa-solid fa-xmark" />
+                     </button>
                   </>
                ) : (
                   <>
-                     <span></span>
-                     <span></span>
-                     <span></span>
+                     <button className={styles.icon}>
+                        <FontAwesomeIcon icon="fa-solid fa-sun" />
+                     </button>
+
+                     <button className={`${styles.icon} ${styles.iconBars}`}>
+                        <FontAwesomeIcon icon="fa-solid fa-bars" />
+                     </button>
                   </>
                )}
             </div>
          </div>
-         {menu && (
-            <>
-               <div className="menu-links">
-                  <Link to="#" className="nav-link" onClick={() => mobileMenuToggle()}>
-                     Sobre Nosotros
-                  </Link>
-                  <Link to="#" className="nav-link" onClick={() => mobileMenuToggle()}>
-                     Preguntas Frecuentes
-                  </Link>
-                  <Link
-                     to="/editor"
-                     className="nav-link"
-                     onClick={() => mobileMenuToggle()}
-                  >
-                     Crear Baldosa
-                  </Link>
-               </div>
-            </>
-         )}
       </nav>
    );
 };

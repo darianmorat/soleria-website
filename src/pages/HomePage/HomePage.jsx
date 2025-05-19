@@ -9,7 +9,7 @@ import { Visualizer } from "../../sections/Visualizer/Visualizer";
 
 const HomePage = () => {
    return (
-      <div className="landing-container">
+      <>
          <Hero />
          <Description />
          <Crafting />
@@ -18,7 +18,7 @@ const HomePage = () => {
          <Visualizer />
          <Catalog />
          <Questions />
-      </div>
+      </>
    );
 };
 

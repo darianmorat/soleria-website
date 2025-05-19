@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import styles from "./ParticlesBackground.module.css";
 
 export const ParticlesBackground = () => {
    const canvasRef = useRef(null);
@@ -102,17 +103,5 @@ export const ParticlesBackground = () => {
       };
    }, []);
 
-   return (
-      <canvas
-         ref={canvasRef}
-         style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            top: 0,
-            left: 0,
-            zIndex: 1,
-         }}
-      />
-   );
+   return <canvas ref={canvasRef} className={styles.canvas} />;
 };

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import footerDecoration from "../../assets/footer/footer-decoration.png";
 import logo from "../../assets/logo/logo.png";
-import "./Footer.css";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
    const currentYear = new Date().getFullYear();
@@ -12,19 +12,19 @@ const Footer = () => {
    };
 
    return (
-      <footer className="footer">
-         <div className="footer-container">
-            <img src={footerDecoration} alt="" className="footer-decoration" />
-            <div className="footer-content">
-               <div className="footer-section">
-                  <Link to="/" className="footer-logo" onClick={scrollToTop}>
-                     <img src={logo} alt="logo" className="footer-logo" />
+      <footer className={styles.footer}>
+         <div className={styles.container}>
+            <img src={footerDecoration} alt="" className={styles.decoration} />
+            <div className={styles.content}>
+               <div className={styles.section}>
+                  <Link to="/" className={styles.logoLink} onClick={scrollToTop}>
+                     <img src={logo} alt="logo" className={styles.logo} />
                   </Link>
                </div>
 
-               <div className="footer-section">
-                  <div className="footer-contact-container">
-                     <ul className="footer-contact">
+               <div className={styles.section}>
+                  <div className={styles.contactContainer}>
+                     <ul className={styles.contactList}>
                         <li>
                            <FontAwesomeIcon
                               icon="fa-solid fa-phone-volume"
@@ -75,7 +75,7 @@ const Footer = () => {
                            </a>
                         </li>
                      </ul>
-                     <ul className="footer-contact">
+                     <ul className={styles.contactList}>
                         <li>
                            <FontAwesomeIcon
                               icon="fa-solid fa-clipboard-list"
@@ -120,7 +120,7 @@ const Footer = () => {
                </div>
             </div>
 
-            <div className="footer-bottom">
+            <div className={styles.bottom}>
                <p>&copy; {currentYear} Soleria | Todos los derechos reservados.</p>
             </div>
          </div>
