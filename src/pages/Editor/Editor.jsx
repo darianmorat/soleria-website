@@ -461,9 +461,7 @@ const Editor = () => {
                               ref={previewCanvasRef}
                            ></canvas>
                            <div className={styles.btnActions}>
-                              <button id="savePreviewBtn" onClick={savePreviewGrid}>
-                                 Guardar Preview
-                              </button>
+                              <button onClick={savePreviewGrid}>Guardar Preview</button>
                            </div>
                         </div>
                      </div>

@@ -46,7 +46,6 @@ button {
    font-weight: 500;
    color: white;
    background-color: var(--primary-color);
-   align-self: flex-start;
 
    &:hover {
       filter: brightness(1.1);
