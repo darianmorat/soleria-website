@@ -1,3 +1,8 @@
+.title {
+   text-align: center;
+   margin-bottom: 40px;
+}
+
 .grid {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -5,7 +10,7 @@
 }
 
 .step {
-   padding: 30px;
+   padding: 20px;
    background-color: var(--light-gray);
    border-radius: var(--border-radius-sm);
    transition: var(--transition-fast);
@@ -18,11 +23,11 @@
 
    & img {
       position: absolute;
-      top: -15px;
-      right: -0px;
-      height: 90px;
+      top: 0px;
+      right: 0px;
+      height: 60px;
       max-width: 108px;
-      margin: 0px;
+      margin: 10px;
    }
 }
 

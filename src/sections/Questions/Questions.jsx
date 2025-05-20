@@ -6,6 +6,7 @@ export const Questions = () => {
       <>
          <div id="questions"></div>
          <Section title="Preguntas frecuentes" divider="primary">
+            <h2 className={styles.title}>Preguntas frecuentes</h2>
             <div className={styles.content}>
                <div className={styles.item}>
                   <h3>¿Qué es una baldosa hidráulica?</h3>

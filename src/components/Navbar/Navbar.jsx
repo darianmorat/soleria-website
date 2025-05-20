@@ -90,17 +90,20 @@ const Navbar = () => {
                </div>
             )}
 
-            <div className={styles.menuBtn} onClick={() => mobileMenuToggle()}>
+            <div className={styles.menuBtn}>
                {isMenuOpen ? (
                   <>
-                     <button>
+                     <button onClick={() => mobileMenuToggle()}>
                         <FontAwesomeIcon icon="fa-solid fa-xmark" />
                      </button>
                   </>
                ) : (
                   <>
                      <DarkModeToggle />
-                     <button className={`${styles.icon} ${styles.iconBars}`}>
+                     <button
+                        className={`${styles.icon} ${styles.iconBars}`}
+                        onClick={() => mobileMenuToggle()}
+                     >
                         <FontAwesomeIcon icon="fa-solid fa-bars" />
                      </button>
                   </>

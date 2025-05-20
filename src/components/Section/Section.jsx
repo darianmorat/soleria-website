@@ -1,6 +1,6 @@
 import styles from "./Section.module.css";
 
-export const Section = ({ title, bgColor, children, divider }) => {
+export const Section = ({ children, bgColor, divider }) => {
    const bgColorClass = bgColor === "primary" ? styles.bgPrimary : "";
    let dividerColor = "";
 
@@ -14,11 +14,7 @@ export const Section = ({ title, bgColor, children, divider }) => {
 
    return (
       <section className={`${styles.section} ${bgColorClass} ${dividerColor}`}>
-         <div className={styles.container}>
-            <h2 className={styles.title}>{title}</h2>
-            <div className={styles.separation}></div>
-            {children}
-         </div>
+         <div className={styles.container}>{children}</div>
       </section>
    );
 };

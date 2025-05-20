@@ -6,33 +6,34 @@
 // import finalResult2 from "../../assets/tiles/final-result2.jpg";
 // import finalResult3 from "../../assets/tiles/final-result3.jpg";
 // import { tileColors } from "../../data/TileColors";
-// import styles from "./Create.module.css";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Section } from "../../components/Section/Section";
+import styles from "./Create.module.css";
 
 export const Create = () => {
-   const navigate = useNavigate();
-
-   const scrollToTop = () => {
-      window.scrollTo(0, 0);
-   };
+   // const navigate = useNavigate();
+   //
+   // const scrollToTop = () => {
+   //    window.scrollTo(0, 0);
+   // };
 
    return (
-      <Section title="Crea tu baldosa" bgColor="primary" divider="secondary">
+      <Section bgColor="primary" divider="secondary">
+         <h2 className={styles.title}>Crea tu baldosa</h2>
          <p>
             De la vista nace el amor porque antes de caminarlo, lo miras, Porque un patrón
             puede enamorarte como una mirada. Porque hay suelos que no solo se pisan, se
             contemplan. Porque el color despierta la memoria y la forma te invita a
             imaginar.
          </p>
-         <br />
-         <button
-            onClick={() => {
-               navigate("/editor"), scrollToTop();
-            }}
-         >
-            Crear baldosa
-         </button>
+         {/* <br /> */}
+         {/* <button */}
+         {/*    onClick={() => { */}
+         {/*       navigate("/editor"), scrollToTop(); */}
+         {/*    }} */}
+         {/* > */}
+         {/*    Crear baldosa */}
+         {/* </button> */}
          {/* <div className={styles.layout}> */}
          {/*    <div className=""> */}
          {/*       <div className=""> */}

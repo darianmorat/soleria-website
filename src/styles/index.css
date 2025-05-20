@@ -17,6 +17,12 @@ body {
    background-color: white;
 }
 
+h2 {
+   font-size: var(--font-size-lg);
+   color: var(--primary-color);
+   font-weight: 900;
+}
+
 h3 {
    font-size: var(--font-size-md);
    color: var(--font-color-base);
@@ -40,6 +46,7 @@ button {
    font-weight: 500;
    color: white;
    background-color: var(--primary-color);
+   align-self: flex-start;
 
    &:hover {
       filter: brightness(1.1);

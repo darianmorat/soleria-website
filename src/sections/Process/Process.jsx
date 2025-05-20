@@ -9,7 +9,8 @@ import image6 from "../../assets/processSection/PASO 6.png";
 
 export const Process = () => {
    return (
-      <Section title="¿Cómo creamos juntos?" divider="primary">
+      <Section divider="primary">
+         <h2 className={styles.title}>¿Cómo creamos juntos?</h2>
          <div className={styles.grid}>
             <div className={styles.step}>
                <img src={image1} alt="image-1" />

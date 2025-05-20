@@ -97,27 +97,20 @@ export const BookCatalog = () => {
    const BookActions = () => {
       return (
          <div className={styles.actions}>
-            <button
-               onClick={() => book.current.pageFlip().flipPrev()}
-            >
+            <button onClick={() => book.current.pageFlip().flipPrev()}>
                <FontAwesomeIcon icon="fa-solid fa-angle-left" className="icons-v2" />
                Prev
             </button>
-            <div>
-               {currentPage + 1} of {totalPages}
+            <div className={styles.currentPageContainer}>
+               {currentPage + 1}/{totalPages}
             </div>
-            <button
-               onClick={() => book.current.pageFlip().flipNext()}
-            >
+            <button onClick={() => book.current.pageFlip().flipNext()}>
                Next
                <FontAwesomeIcon icon="fa-solid fa-angle-right" className="icons-v2" />
             </button>
 
             {isExpanded ? (
-               <button
-                  className="expand-button expand-close"
-                  onClick={toggleExpand}
-               >
+               <button className="expand-button expand-close" onClick={toggleExpand}>
                   <FontAwesomeIcon icon="fa-solid fa-compress" />
                </button>
             ) : (

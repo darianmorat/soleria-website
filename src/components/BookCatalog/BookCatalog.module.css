@@ -51,3 +51,13 @@
       }
    }
 }
+
+@media (width < 468px) {
+   .actions {
+      background-color: transparent;
+   }
+
+   .currentPageContainer {
+      font-size: var(--font-size-sm);
+   }
+}

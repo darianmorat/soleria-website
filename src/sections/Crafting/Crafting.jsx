@@ -1,15 +1,19 @@
-import visualizador1 from "../../assets/tiles/para visualizador1.png";
-import visualizador2 from "../../assets/tiles/para visualizador2.png";
-import visualizador3 from "../../assets/tiles/para visualizador3.png";
+import visualizador1 from "../../assets/tiles/CAPA 1.png";
+import visualizador2 from "../../assets/tiles/CAPA 2.png";
+import visualizador3 from "../../assets/tiles/CAPA 3.png";
+import visualFinal from "../../assets/tiles/TODO CAPAS.png";
+import tileProduct1 from "../../assets/tiles/BALDOSA 1.png";
+import tileProduct2 from "../../assets/tiles/BALDOSA 2.png";
 import { Section } from "../../components/Section/Section";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Crafting.module.css";
 
 export const Crafting = () => {
    return (
-      <Section title="Arte hecho a mano" bgColor="primary" divider="secondary">
+      <Section bgColor="primary" divider="secondary">
          <div className={styles.content}>
-            <div className={styles.video}>
-               <div className={styles.videoWrapper}>
+            <div className={styles.firstSection}>
+               <div className={styles.video}>
                   <iframe
                      width="100%"
                      height="100%"
@@ -19,54 +23,84 @@ export const Crafting = () => {
                      allowFullScreen
                   ></iframe>
                </div>
-               <p>
-                  Cada baldosa se hace una por una, con pigmentos minerales, moldes y
-                  fuerza humana, es un oficio que resiste al tiempo y a las modas, y en
-                  Solería, lo mantenemos vivo.
-               </p>
+               <div className={styles.endTileSection}>
+                  <h2>Arte hecho a mano</h2>
+                  <p>
+                     Cada baldosa se hace una por una, con pigmentos minerales, moldes y
+                     fuerza humana, es un oficio que resiste al tiempo y a las modas, y en
+                     Solería, lo mantenemos vivo.
+                  </p>
+                  <div className={styles.tileContainer}>
+                     <img
+                        src={tileProduct1}
+                        alt="baldosa 1"
+                        className={styles.firstTile}
+                     />
+                     <div>
+                        <FontAwesomeIcon
+                           icon="fa-solid fa-arrow-right"
+                           className={styles.icon}
+                        />
+                     </div>
+                     <img
+                        src={tileProduct2}
+                        alt="baldosa 2"
+                        className={styles.secondTile}
+                     />
+                  </div>
+               </div>
             </div>
 
-            <div className={styles.infoContainer}>
-               <div className={styles.layerItem}>
-                  <div className={styles.layerTop}>
-                     <img src={visualizador1} alt="Capa superior de la baldosa" />
-                  </div>
-                  <div className={styles.layerDetails}>
-                     <li>Es donde se encuentra el diseño y el color.</li>
-                     <li>Espesor: entre 2 y 4 mm.</li>
-                     <li>
-                        Compuesta por cemento blanco, marmolina, pigmentos minerales y
-                        agua.
-                     </li>
-                  </div>
-               </div>
+            <hr />
 
-               <div className={styles.layerItem}>
-                  <div className={styles.layerTop}>
-                     <img src={visualizador2} alt="Capa intermedia de la baldosa" />
-                  </div>
-                  <div className={styles.layerDetails}>
-                     <li>Compuesta por cemento gris y arena.</li>
-                     <li>Espesor: entre 5 y 8 mm.</li>
-                     <li>
-                        Sirve de transición y absorbe el exceso de agua de la capa de
-                        vista.
-                     </li>
-                  </div>
+            <div className={styles.processSection}>
+               <div className={styles.endTileContainer}>
+                  <h2>Hecha en capas</h2>
+                  <img src={visualFinal} alt="tile" className={styles.finalTile} />
                </div>
-
-               <div className={styles.layerItem}>
-                  <div className={styles.layerTop}>
-                     <img src={visualizador3} alt="Capa base de la baldosa" />
+               <div className={styles.layerContainer}>
+                  <div className={styles.layerItem}>
+                     <div className={styles.layerTop}>
+                        <img src={visualizador1} alt="Capa superior de la baldosa" />
+                     </div>
+                     <div className={styles.layerDetails}>
+                        <li>Es donde se encuentra el diseño y el color.</li>
+                        <li>Espesor: entre 2 y 4 mm.</li>
+                        <li>
+                           Compuesta por cemento blanco, marmolina, pigmentos minerales y
+                           agua.
+                        </li>
+                     </div>
                   </div>
-                  <div className={styles.layerDetails}>
-                     <li>Da estructura y resistencia a la baldosa.</li>
-                     <li>
-                        Espesor: el resto de la baldosa (hasta completar 18–25 mm aprox.)
-                     </li>
-                     <li>
-                        Compuesta por cemento de alta resistencia y áridos más gruesos.
-                     </li>
+
+                  <div className={styles.layerItem}>
+                     <div className={styles.layerTop}>
+                        <img src={visualizador2} alt="Capa intermedia de la baldosa" />
+                     </div>
+                     <div className={styles.layerDetails}>
+                        <li>Compuesta por cemento gris y arena.</li>
+                        <li>Espesor: entre 5 y 8 mm.</li>
+                        <li>
+                           Sirve de transición y absorbe el exceso de agua de la capa de
+                           vista.
+                        </li>
+                     </div>
+                  </div>
+
+                  <div className={styles.layerItem}>
+                     <div className={styles.layerTop}>
+                        <img src={visualizador3} alt="Capa base de la baldosa" />
+                     </div>
+                     <div className={styles.layerDetails}>
+                        <li>Da estructura y resistencia a la baldosa.</li>
+                        <li>
+                           Espesor: el resto de la baldosa (hasta completar 18–25 mm
+                           aprox.)
+                        </li>
+                        <li>
+                           Compuesta por cemento de alta resistencia y áridos más gruesos.
+                        </li>
+                     </div>
                   </div>
                </div>
             </div>

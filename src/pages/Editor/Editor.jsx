@@ -363,7 +363,7 @@ const Editor = () => {
 
    return (
       <div className={styles.editor}>
-         <Section title="Diseña tu baldosa">
+         <Section>
             <div className={styles.container}>
                <div className={styles.tileSection}>
                   <div className={styles.instructions}>
