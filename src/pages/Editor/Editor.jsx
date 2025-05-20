@@ -362,113 +362,116 @@ const Editor = () => {
    }, [currentTile]);
 
    return (
-      <Section title="Diseña tu baldosa">
-         <div className={styles.container}>
-            <div className={styles.tileSection}>
-               <div className={styles.instructions}>
-                  <p>
-                     <strong>Baldosas:</strong> Seleccione el modelo de baldosa para crear
-                     su propio diseño de suelo hidráulico.
-                  </p>
-               </div>
-               <div className={styles.menus}>
-                  <div className={styles.tilesMenu}>
-                     <div className={styles.tileItem}>
-                        {tileModels.map((tile, index) => (
-                           <div
-                              key={index}
-                              className={`${styles.tile} ${currentTile === tile.id ? styles.selected : ""}`}
-                              onClick={(e) => handleTileClick(e, tile.id)}
-                              data-tile={tile.id}
-                           >
-                              <img src={tile.id} alt={tile.alt} />
-                           </div>
-                        ))}
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div className={styles.designArea}>
-               <div className={styles.editorSection}>
+      <div className={styles.editor}>
+         <Section title="Diseña tu baldosa">
+            <div className={styles.container}>
+               <div className={styles.tileSection}>
                   <div className={styles.instructions}>
                      <p>
-                        <strong>Editor:</strong> Seleccione el color para personalizar la
-                        baldosa elegida. Pinche en la zona que desee colorear.
+                        <strong>Baldosas:</strong> Seleccione el modelo de baldosa para
+                        crear su propio diseño de suelo hidráulico.
                      </p>
                   </div>
                   <div className={styles.menus}>
-                     <div className={styles.paletteMenu}>
-                        <div className={styles.palette}>
-                           {tileColors.map((colorItem, index) => (
+                     <div className={styles.tilesMenu}>
+                        <div className={styles.tileItem}>
+                           {tileModels.map((tile, index) => (
                               <div
                                  key={index}
-                                 className={`${styles.color} ${colorName === colorItem.name ? styles.selected : ""}`}
-                                 data-color={colorItem.color}
-                                 data-name={colorItem.name}
-                                 title={colorItem.name}
-                                 style={{ backgroundColor: colorItem.color }}
-                                 onClick={handleColorClick}
-                              ></div>
+                                 className={`${styles.tile} ${currentTile === tile.id ? styles.selected : ""}`}
+                                 onClick={(e) => handleTileClick(e, tile.id)}
+                                 data-tile={tile.id}
+                              >
+                                 <img src={tile.id} alt={tile.alt} />
+                              </div>
                            ))}
                         </div>
                      </div>
-
-                     <div className={styles.colorDisplay}>
-                        <div className={styles.colorSelection}>
-                           El color elegido es: <strong>{colorName}</strong>
-                        </div>
-                     </div>
-                     <div className={styles.canvasContainer}>
-                        <div className={styles.measures}>
-                           <p>20x20 cm</p>
-                           <div></div>
-                        </div>
-                        <canvas
-                           className={styles.canvas}
-                           ref={canvasRef}
-                           onClick={handleCanvasClick}
-                        ></canvas>
-                        <div className={styles.btnActions}>
-                           <button onClick={saveDesign}>Guardar Diseño</button>
-                           <button className={styles.resetBtn} onClick={resetCanvas}>
-                              Reiniciar
-                           </button>
-                        </div>
-                     </div>
                   </div>
                </div>
 
-               <div className={styles.sueloSection}>
-                  <div className={styles.instructions}>
-                     <p>
-                        <strong>Suelo:</strong> A medida que vaya coloreando la baldosa el
-                        simulador se rellenará automáticamente. Una vez haya finalizado el
-                        diseño de su suelo puede comprobar el resultado en la vista 3D.
-                     </p>
-                  </div>
-                  <div className={styles.menus}>
-                     <div></div>
-                     <div className={styles.sueloGrid}>
-                        <div className={styles.measures}>
-                           <p>100x100 cm</p>
-                           <div></div>
+               <div className={styles.designArea}>
+                  <div className={styles.editorSection}>
+                     <div className={styles.instructions}>
+                        <p>
+                           <strong>Editor:</strong> Seleccione el color para personalizar
+                           la baldosa elegida. Pinche en la zona que desee colorear.
+                        </p>
+                     </div>
+                     <div className={styles.menus}>
+                        <div className={styles.paletteMenu}>
+                           <div className={styles.palette}>
+                              {tileColors.map((colorItem, index) => (
+                                 <div
+                                    key={index}
+                                    className={`${styles.color} ${colorName === colorItem.name ? styles.selected : ""}`}
+                                    data-color={colorItem.color}
+                                    data-name={colorItem.name}
+                                    title={colorItem.name}
+                                    style={{ backgroundColor: colorItem.color }}
+                                    onClick={handleColorClick}
+                                 ></div>
+                              ))}
+                           </div>
                         </div>
-                        <canvas
-                           className={styles.previewCanvas}
-                           ref={previewCanvasRef}
-                        ></canvas>
-                        <div className={styles.btnActions}>
-                           <button id="savePreviewBtn" onClick={savePreviewGrid}>
-                              Guardar Preview
-                           </button>
+
+                        <div className={styles.colorDisplay}>
+                           <div className={styles.colorSelection}>
+                              El color elegido es: <strong>{colorName}</strong>
+                           </div>
+                        </div>
+                        <div className={styles.canvasContainer}>
+                           <div className={styles.measures}>
+                              <p>20x20 cm</p>
+                              <div></div>
+                           </div>
+                           <canvas
+                              className={styles.canvas}
+                              ref={canvasRef}
+                              onClick={handleCanvasClick}
+                           ></canvas>
+                           <div className={styles.btnActions}>
+                              <button onClick={saveDesign}>Guardar Diseño</button>
+                              <button className={styles.resetBtn} onClick={resetCanvas}>
+                                 Reiniciar
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div className={styles.sueloSection}>
+                     <div className={styles.instructions}>
+                        <p>
+                           <strong>Suelo:</strong> A medida que vaya coloreando la baldosa
+                           el simulador se rellenará automáticamente. Una vez haya
+                           finalizado el diseño de su suelo puede comprobar el resultado
+                           en la vista 3D.
+                        </p>
+                     </div>
+                     <div className={styles.menus}>
+                        <div></div>
+                        <div className={styles.sueloGrid}>
+                           <div className={styles.measures}>
+                              <p>100x100 cm</p>
+                              <div></div>
+                           </div>
+                           <canvas
+                              className={styles.previewCanvas}
+                              ref={previewCanvasRef}
+                           ></canvas>
+                           <div className={styles.btnActions}>
+                              <button id="savePreviewBtn" onClick={savePreviewGrid}>
+                                 Guardar Preview
+                              </button>
+                           </div>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-         </div>
-      </Section>
+         </Section>
+      </div>
    );
 };
 

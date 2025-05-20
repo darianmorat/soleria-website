@@ -6,7 +6,7 @@ import styles from "./Crafting.module.css";
 
 export const Crafting = () => {
    return (
-      <Section title="Arte hecho a mano" bgColor="primary">
+      <Section title="Arte hecho a mano" bgColor="primary" divider="secondary">
          <div className={styles.content}>
             <div className={styles.video}>
                <div className={styles.videoWrapper}>

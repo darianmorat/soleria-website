@@ -48,7 +48,8 @@
    align-items: center;
    margin-top: 1px;
 }
-& .iconBars {
+
+.iconBars {
    background-color: transparent;
    color: var(--primary-color);
    border: 2px solid var(--primary-color);

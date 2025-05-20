@@ -16,7 +16,7 @@
       object-fit: cover;
       top: 70px;
       left: 0;
-      filter: brightness(0.5);
+      filter: brightness(0.6);
       object-position: 70% center;
    }
 }

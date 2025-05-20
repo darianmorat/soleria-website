@@ -6,7 +6,7 @@ export const Visualizer = () => {
    const navigate = useNavigate();
 
    return (
-      <Section title="Hazlo real">
+      <Section title="Hazlo real" divider="primary">
          <div className={styles.content}>
             <div className={styles.information}>
                <p>

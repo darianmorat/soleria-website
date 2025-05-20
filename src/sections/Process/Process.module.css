@@ -9,9 +9,20 @@
    background-color: var(--light-gray);
    border-radius: var(--border-radius-sm);
    transition: var(--transition-fast);
+   position: relative;
+   /* overflow: hidden; */
 
    & h3 {
       color: var(--secondary-color);
+   }
+
+   & img {
+      position: absolute;
+      top: -15px;
+      right: -0px;
+      height: 90px;
+      max-width: 108px;
+      margin: 0px;
    }
 }
 
@@ -23,7 +34,7 @@
    width: 40px;
    height: 40px;
    color: white;
-   background-color: var(--primary-color);
+   background-color: var(--secondary-color);
    border-radius: var(--border-radius-sm);
    display: flex;
    align-items: center;

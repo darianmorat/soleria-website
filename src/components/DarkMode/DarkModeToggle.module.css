@@ -1,0 +1,9 @@
+.icon {
+   width: 44px;
+   height: 40px;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 1px;
+}

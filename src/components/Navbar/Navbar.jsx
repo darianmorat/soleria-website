@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/logo/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { DarkModeToggle } from "../DarkMode/DarkModeToggle";
+import logo from "../../assets/logo/logo.png";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
@@ -33,7 +34,20 @@ const Navbar = () => {
                   <Link to="#" className={styles.link} onClick={() => mobileMenuToggle()}>
                      Sobre nosotros
                   </Link>
-                  <Link to="#" className={styles.link} onClick={() => mobileMenuToggle()}>
+                  <Link
+                     to="/"
+                     className={styles.link}
+                     onClick={() => {
+                        mobileMenuToggle();
+                        navigate("/");
+                        setTimeout(() => {
+                           const element = document.getElementById("questions");
+                           if (element) {
+                              element.scrollIntoView({ behavior: "smooth" });
+                           }
+                        }, 500);
+                     }}
+                  >
                      Preguntas frecuentes
                   </Link>
                   <Link
@@ -49,9 +63,21 @@ const Navbar = () => {
                   <Link to="#" className={styles.link}>
                      Sobre nosotros
                   </Link>
-                  <a href="#questions" className={styles.link}>
+                  <Link
+                     to="/"
+                     className={styles.link}
+                     onClick={() => {
+                        navigate("/");
+                        setTimeout(() => {
+                           const element = document.getElementById("questions");
+                           if (element) {
+                              element.scrollIntoView({ behavior: "smooth" });
+                           }
+                        }, 500);
+                     }}
+                  >
                      Preguntas frecuentes
-                  </a>
+                  </Link>
                   <button
                      className={styles.createBtn}
                      onClick={() => {
@@ -60,9 +86,7 @@ const Navbar = () => {
                   >
                      Crear baldosa
                   </button>
-                  <button className={styles.icon}>
-                     <FontAwesomeIcon icon="fa-solid fa-sun" />
-                  </button>
+                  <DarkModeToggle />
                </div>
             )}
 
@@ -75,10 +99,7 @@ const Navbar = () => {
                   </>
                ) : (
                   <>
-                     <button className={styles.icon}>
-                        <FontAwesomeIcon icon="fa-solid fa-sun" />
-                     </button>
-
+                     <DarkModeToggle />
                      <button className={`${styles.icon} ${styles.iconBars}`}>
                         <FontAwesomeIcon icon="fa-solid fa-bars" />
                      </button>

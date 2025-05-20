@@ -4,7 +4,7 @@ import styles from "./Catalog.module.css";
 
 export const Catalog = () => {
    return (
-      <Section title="Conoce nuestro catálogo" bgColor="primary">
+      <Section title="Conoce nuestro catálogo" bgColor="primary" divider="secondary">
          <div className={styles.container}>
             <BookCatalog />
          </div>

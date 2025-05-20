@@ -12,7 +12,7 @@ const Footer = () => {
    };
 
    return (
-      <footer className={styles.footer}>
+      <footer className={`${styles.footer} ${styles.secondaryDivider}`}>
          <div className={styles.container}>
             <img src={footerDecoration} alt="" className={styles.decoration} />
             <div className={styles.content}>

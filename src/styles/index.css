@@ -10,15 +10,9 @@
 }
 
 body {
-   transition: 0.3s;
    line-height: 1.5;
    color-scheme: light dark;
 
-   /* light */
-   color: white;
-   background-color: #202020;
-
-   /* dark */
    color: var(--font-color-base);
    background-color: white;
 }

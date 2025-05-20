@@ -6,7 +6,7 @@ export const Description = () => {
    const navigate = useNavigate();
 
    return (
-      <Section title="De la vista nace el amor">
+      <Section title="De la vista nace el amor" divider="terciary">
          <div className={styles.content}>
             <div className={styles.text}>
                <p>
