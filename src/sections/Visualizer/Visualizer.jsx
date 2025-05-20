@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Section } from "../../components/Section/Section";
-import aumentedReality from "../../assets/visualizer/home-design.jpg";
+import aumentedReality from "../../assets/sections/visualizer/home-design.jpg";
 import styles from "./Visualizer.module.css";
 
 export const Visualizer = () => {

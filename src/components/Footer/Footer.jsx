@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import footerDecoration from "../../assets/footer/footer-decoration.png";
-import logo from "../../assets/logo/logo.png";
+import footerDecoration from "../../assets/footer-decoration.png";
+import logo from "../../assets/logo.png";
 import styles from "./Footer.module.css";
 
 const Footer = () => {

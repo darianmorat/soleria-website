@@ -346,8 +346,19 @@ const Editor = () => {
    useEffect(() => {
       initializeColorPalette();
 
+      // Find and select the first color
+      const firstColor = document.querySelector(`.${styles.color}`);
+      if (firstColor) {
+         firstColor.classList.add("selected");
+         const colorValue = firstColor.getAttribute("data-color");
+         const colorName = firstColor.getAttribute("data-name");
+         selectColor(colorValue, colorName);
+      }
+
+      // Find and select the first tile
       const firstTile = document.querySelector(`.${styles.tile}`);
       if (firstTile) {
+         firstTile.classList.add("selected");
          const tileId = firstTile.getAttribute("data-tile");
          if (tileId) {
             selectTile(tileId);

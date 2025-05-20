@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { DarkModeToggle } from "../DarkMode/DarkModeToggle";
-import logo from "../../assets/logo/logo.png";
+import logo from "../../assets/logo.png";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
