@@ -1,11 +1,11 @@
-import { Section } from "../../components/Section/Section";
+import { Section } from "../../../../components/Section/Section";
 import styles from "./Process.module.css";
-import image1 from "../../assets/sections/process/PASO 1.png";
-import image2 from "../../assets/sections/process/PASO 2.png";
-import image3 from "../../assets/sections/process/PASO 3.png";
-import image4 from "../../assets/sections/process/PASO 4.png";
-import image5 from "../../assets/sections/process/PASO 5.png";
-import image6 from "../../assets/sections/process/PASO 6.png";
+import image1 from "../../../../assets/sections/process/PASO 1.png";
+import image2 from "../../../../assets/sections/process/PASO 2.png";
+import image3 from "../../../../assets/sections/process/PASO 3.png";
+import image4 from "../../../../assets/sections/process/PASO 4.png";
+import image5 from "../../../../assets/sections/process/PASO 5.png";
+import image6 from "../../../../assets/sections/process/PASO 6.png";
 
 export const Process = () => {
    return (

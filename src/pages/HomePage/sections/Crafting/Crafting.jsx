@@ -1,11 +1,11 @@
-import visualizador1 from "../../assets/sections/crafting/CAPA 1.png";
-import visualizador2 from "../../assets/sections/crafting/CAPA 2.png";
-import visualizador3 from "../../assets/sections/crafting/CAPA 3.png";
-import visualFinal from "../../assets/sections/crafting/TODO CAPAS.png";
-import tileProduct1 from "../../assets/sections/crafting/BALDOSA 1.png";
-import tileProduct2 from "../../assets/sections/crafting/BALDOSA 2.png";
+import visualizador1 from "../../../../assets/sections/crafting/CAPA 1.png";
+import visualizador2 from "../../../../assets/sections/crafting/CAPA 2.png";
+import visualizador3 from "../../../../assets/sections/crafting/CAPA 3.png";
+import visualFinal from "../../../../assets/sections/crafting/TODO CAPAS.png";
+import tileProduct1 from "../../../../assets/sections/crafting/BALDOSA 1.png";
+import tileProduct2 from "../../../../assets/sections/crafting/BALDOSA 2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Section } from "../../components/Section/Section";
+import { Section } from "../../../../components/Section/Section";
 import styles from "./Crafting.module.css";
 
 export const Crafting = () => {

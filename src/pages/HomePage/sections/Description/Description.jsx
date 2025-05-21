@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Section } from "../../components/Section/Section";
+import { Section } from "../../../../components/Section/Section";
 import styles from "./Description.module.css";
 
 export const Description = () => {

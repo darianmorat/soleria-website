@@ -1,5 +1,5 @@
-import { BookCatalog } from "../../components/BookCatalog/BookCatalog";
-import { Section } from "../../components/Section/Section";
+import { BookCatalog } from "../../../../components/BookCatalog/BookCatalog";
+import { Section } from "../../../../components/Section/Section";
 import styles from "./Catalog.module.css";
 
 export const Catalog = () => {

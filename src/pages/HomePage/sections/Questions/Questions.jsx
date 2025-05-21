@@ -1,4 +1,4 @@
-import { Section } from "../../components/Section/Section";
+import { Section } from "../../../../components/Section/Section";
 import styles from "./Questions.module.css";
 
 export const Questions = () => {
