@@ -232,7 +232,7 @@ export const ModelViewer = () => {
             <button className="back-btn" onClick={() => navigate("/")}>
                ❮❮
             </button>
-            <button slot="ar-button" id="ar-button">
+            <button /* slot="ar-button" */ id="ar-button">
                <img src={icon} alt="" />
                Visualizalo
             </button>
@@ -307,16 +307,17 @@ export const ModelViewer = () => {
             </svg>
 
             <div id="controls" className="glass">
-               <label htmlFor="src">Product:</label>
-               <select id="src">
-                  <option value={baldosa1} data-ios-src={baldosa1USDZ}>
-                     baldosa 1
-                  </option>
-                  <option value={baldosa2} data-ios-src={baldosa2USDZ}>
-                     baldosa 2
-                  </option>
-               </select>
-
+               <div>
+                  <label htmlFor="src">Product:</label>
+                  <select id="src">
+                     <option value={baldosa1} data-ios-src={baldosa1USDZ}>
+                        baldosa 1
+                     </option>
+                     <option value={baldosa2} data-ios-src={baldosa2USDZ}>
+                        baldosa 2
+                     </option>
+                  </select>
+               </div>
                <div>
                   <label htmlFor="show-dimensions">Show Dimensions:</label>
                   <input id="show-dimensions" type="checkbox" defaultChecked />

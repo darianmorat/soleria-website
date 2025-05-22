@@ -18,6 +18,9 @@ model-viewer {
    top: 0;
    left: 0;
    margin: 20px;
+   color: black;
+   background: rgba(255, 255, 255, 0.57);
+   backdrop-filter: blur(8px) contrast(0.89) saturate(1.27);
 }
 
 model-viewer {
@@ -29,15 +32,17 @@ model-viewer {
    top: 0;
    right: 0;
    margin: 20px;
-   color: #4285f4;
-   background-color: white;
+   color: black;
    display: flex;
    justify-content: center;
    align-items: center;
    gap: 10px;
+   background: rgba(255, 255, 255, 0.57);
+   backdrop-filter: blur(8px) contrast(0.89) saturate(1.27);
 
    & img {
       width: 20px;
+      filter: saturate(0) brightness(0);
    }
 }
 
@@ -78,6 +83,9 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
    display: flex;
    flex-direction: column;
    margin: 20px;
+   padding: 15px 20px;
+   gap: 5px;
+   font-weight: 600;
 }
 
 .dot {
