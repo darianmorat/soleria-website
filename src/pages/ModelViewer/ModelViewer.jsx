@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import baldosa1 from "../../assets/models/baldosa1.glb";
 import baldosa2 from "../../assets/models/baldosa2.glb";
+import baldosa1USDZ from "../../assets/models/baldosa1.usdz";
+import baldosa2USDZ from "../../assets/models/baldosa2.usdz";
 import skybox from "../../assets/models/enviroments/small_hangar_01_1k.jpg";
 import hand from "../../assets/models/others/hand.png";
 import "./ModelViewer.css";
@@ -212,6 +214,7 @@ export const ModelViewer = () => {
          <model-viewer
             ref={modelViewerRef}
             src={baldosa1}
+            ios-src={baldosa1USDZ}
             skybox-image={skybox}
             skybox-height="6m"
             alt="Model 3D de baldosa"
@@ -306,8 +309,12 @@ export const ModelViewer = () => {
             <div id="controls" className="glass">
                <label htmlFor="src">Product:</label>
                <select id="src">
-                  <option value={baldosa1}>baldosa 1</option>
-                  <option value={baldosa2}>baldosa 2</option>
+                  <option value={baldosa1} data-ios-src={baldosa1USDZ}>
+                     baldosa 1
+                  </option>
+                  <option value={baldosa2} data-ios-src={baldosa2USDZ}>
+                     baldosa 2
+                  </option>
                </select>
 
                <div>
