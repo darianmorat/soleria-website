@@ -12,6 +12,19 @@ export const ModelViewer = () => {
    const modelViewerRef = useRef(null);
 
    useEffect(() => {
+      // Set actual viewport height
+      const setRealVh = () => {
+         const vh = window.innerHeight * 0.01;
+         document.documentElement.style.setProperty("--vh", `${vh}px`);
+      };
+
+      setRealVh();
+      window.addEventListener("resize", setRealVh);
+
+      return () => window.removeEventListener("resize", setRealVh);
+   }, []);
+
+   useEffect(() => {
       const modelViewer = modelViewerRef.current;
       if (!modelViewer) return;
 
