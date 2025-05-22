@@ -1,3 +1,18 @@
+/* This keeps child nodes hidden while the element loads */
+:not(:defined) > * {
+   display: none;
+}
+
+.container {
+   width: 100vw;
+   height: 100vh;
+}
+
+model-viewer {
+   width: 100%;
+   height: 100%;
+}
+
 .back-btn {
    position: absolute;
    top: 0;
@@ -6,63 +21,23 @@
 }
 
 model-viewer {
-   width: 100vw;
-   height: 100vh;
-}
-
-/* This keeps child nodes hidden while the element loads */
-:not(:defined) > * {
-   display: none;
-}
-
-model-viewer {
    background-color: #eee;
-   overflow-x: hidden;
 }
 
 #ar-button {
-   background-image: url(./assets/ic_view_in_ar_new_googblue_48dp.png);
-   background-repeat: no-repeat;
-   background-size: 20px 20px;
-   background-position: 12px 50%;
-   background-color: #fff;
    position: absolute;
-   left: 50%;
-   transform: translateX(-50%);
-   white-space: nowrap;
-   top: 132px;
-   padding: 0px 16px 0px 40px;
-   font-family:
-      Roboto Regular,
-      Helvetica Neue,
-      sans-serif;
-   font-size: 18px;
+   top: 0;
+   right: 0;
+   margin: 20px;
    color: #4285f4;
-   height: 56px;
-   line-height: 36px;
-   border-radius: 18px;
-   border: 1px solid #dadce0;
-}
+   background-color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
 
-#ar-button:active {
-   background-color: #e8eaed;
-}
-
-#ar-button:focus {
-   outline: none;
-}
-
-#ar-button:focus-visible {
-   outline: 1px solid #4285f4;
-}
-
-@keyframes circle {
-   from {
-      transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg);
-   }
-
-   to {
-      transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg);
+   & img {
+      width: 20px;
    }
 }
 
@@ -76,20 +51,12 @@ model-viewer {
    }
 }
 
-model-viewer > #ar-prompt {
-   position: absolute;
-   left: 50%;
-   bottom: 175px;
-   animation: elongate 2s infinite ease-in-out alternate;
+#ar-prompt {
    display: none;
 }
 
 model-viewer[ar-status="session-started"] > #ar-prompt {
    display: block;
-}
-
-model-viewer > #ar-prompt > img {
-   animation: circle 4s linear infinite;
 }
 
 model-viewer > #ar-failure {
@@ -104,70 +71,13 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
    display: block;
 }
 
-.slider {
-   width: 100%;
-   text-align: center;
-   overflow: hidden;
-   position: absolute;
-   bottom: 16px;
-}
-
-.slides {
-   display: flex;
-   overflow-x: auto;
-   scroll-snap-type: x mandatory;
-   scroll-behavior: smooth;
-   -webkit-overflow-scrolling: touch;
-}
-
-.slide {
-   scroll-snap-align: start;
-   flex-shrink: 0;
-   width: 100px;
-   height: 100px;
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position: center;
-   background-color: #fff;
-   margin: 10px 10px 0 10px;
-   border-radius: 10px;
-   border: none;
-   display: flex;
-}
-
-.slide.selected {
-   border: 2px solid #4285f450;
-   background-color: #20202050;
-}
-
-.slide:focus {
-   outline: none;
-}
-
-.slide:focus-visible {
-   outline: 1px solid #4285f4;
-}
-
-@media (max-height: 700px) {
-   #ar-button {
-      top: 80px;
-   }
-}
-
-/* TESTING HERE */
-/* TESTING HERE */
-/* TESTING HERE */
-/* TESTING HERE */
-/* TESTING HERE */
-/* TESTING HERE */
 #controls {
    position: absolute;
-   bottom: 16px;
-   left: 16px;
-   max-width: unset;
-   transform: unset;
-   pointer-events: auto;
-   z-index: 100;
+   bottom: 0;
+   left: 0;
+   display: flex;
+   flex-direction: column;
+   margin: 20px;
 }
 
 .dot {
@@ -175,10 +85,9 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
 }
 
 .glass {
-   background: rgba(255, 255, 255, 0.27);
+   background: rgba(255, 255, 255, 0.57);
    backdrop-filter: blur(8px) contrast(0.89) saturate(1.27);
    -webkit-backdrop-filter: blur(8px) contrast(0.89) saturate(1.27);
-   border: 1px solid rgba(255, 255, 255, 0.4);
    padding: 0.5rem;
    border-radius: 0.5rem;
 }
@@ -191,10 +100,6 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
    color: rgba(0, 0, 0, 0.8);
    display: block;
-   font-family:
-      Futura,
-      Helvetica Neue,
-      sans-serif;
    font-weight: 700;
    max-width: 128px;
    overflow-wrap: break-word;
@@ -223,13 +128,8 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
    display: none;
 }
 
-/* Mobile-specific styles */
 @media (max-width: 600px) {
    .dim {
       font-size: 3vw;
-   }
-
-   #ar-button {
-      font-size: 14px;
    }
 }

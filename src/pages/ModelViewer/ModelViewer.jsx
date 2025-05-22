@@ -5,6 +5,7 @@ import skybox from "../../assets/models/enviroments/small_hangar_01_1k.jpg";
 import hand from "../../assets/models/others/hand.png";
 import "./ModelViewer.css";
 import { useNavigate } from "react-router-dom";
+import icon from "../../assets/models/others/ic_view_in_ar_new_googblue_48dp.png";
 
 export const ModelViewer = () => {
    const navigate = useNavigate();
@@ -22,10 +23,6 @@ export const ModelViewer = () => {
       srcSelect?.addEventListener("input", handleSrcChange);
 
       const checkbox = modelViewer.querySelector("#show-dimensions");
-      // const dimElements = [
-      //    ...modelViewer.querySelectorAll("button"),
-      //    modelViewer.querySelector("#dimLines"),
-      // ];
       const dimElements = [
          ...modelViewer.querySelectorAll(
             'button[slot^="hotspot-dim"], button[slot^="hotspot-dot"]',
@@ -198,29 +195,30 @@ export const ModelViewer = () => {
    }, []);
 
    return (
-      <div>
+      <div className="container">
          <model-viewer
             ref={modelViewerRef}
             src={baldosa1}
-            max-camera-orbit="auto 80deg 40m"
             skybox-image={skybox}
             skybox-height="6m"
-            xr-environment
             alt="Model 3D de baldosa"
             id="model-viewer"
             ar
-            ar-modes="webxr"
             ar-scale="fixed"
-            camera-orbit="-30deg 65deg 20m"
-            shadow-intensity="1"
+            ar-modes="webxr scene-viewer quick-look"
+            xr-environment
             camera-controls
+            camera-orbit="-30deg 65deg 20m"
+            max-camera-orbit="auto 80deg 40m"
+            shadow-intensity="1"
             touch-action="pan-y"
          >
             <button className="back-btn" onClick={() => navigate("/")}>
-               Regresar
+               ❮❮
             </button>
             <button slot="ar-button" id="ar-button">
-               View in your space
+               <img src={icon} alt="" />
+               Visualizalo
             </button>
 
             <div id="ar-prompt">
@@ -292,15 +290,17 @@ export const ModelViewer = () => {
                <line className="dimensionLine"></line>
             </svg>
 
-            <div id="controls" className="dim glass">
+            <div id="controls" className="glass">
                <label htmlFor="src">Product:</label>
                <select id="src">
                   <option value={baldosa1}>baldosa 1</option>
                   <option value={baldosa2}>baldosa 2</option>
                </select>
 
-               <label htmlFor="show-dimensions">Show Dimensions:</label>
-               <input id="show-dimensions" type="checkbox" defaultChecked />
+               <div>
+                  <label htmlFor="show-dimensions">Show Dimensions:</label>
+                  <input id="show-dimensions" type="checkbox" defaultChecked />
+               </div>
             </div>
          </model-viewer>
       </div>
