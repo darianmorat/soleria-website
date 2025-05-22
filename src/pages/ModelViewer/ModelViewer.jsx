@@ -232,7 +232,7 @@ export const ModelViewer = () => {
             <button className="back-btn" onClick={() => navigate("/")}>
                ❮❮
             </button>
-            <button /* slot="ar-button" */ id="ar-button">
+            <button slot="ar-button" id="ar-button">
                <img src={icon} alt="" />
                Visualizalo
             </button>
