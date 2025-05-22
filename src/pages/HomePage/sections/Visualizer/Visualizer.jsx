@@ -24,7 +24,7 @@ export const Visualizer = () => {
                      ayudándote a tomar la mejor decisión antes de comprar.
                   </p>
                </div>
-               <button className={styles.button} onClick={() => navigate("#")}>
+               <button className={styles.button} onClick={() => navigate("/model-viewer")}>
                   Probar visualizador 3D
                </button>
             </div>
